@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Wee Sports!</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob: filesystem:">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.2/normalize.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your app project -->
+  <!-- <script src="//ezoui.com/platforms/android_or_ios/cordova.js"></script> -->
+  <!-- GK Loader use RequireJS to load module -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+  <!--Plug in GK-->
+  <script src="https://ezoui.com/components/jquery.gk/jquery.gk.min.js"></script>
+  <!-- Load GK components -->
+  <!-- <script components="https://ezoui.com/components/gk-ext/capture-photo.html,https://ezoui.com/components/gk-ext/gk-text.html" callback="mobileInitPage" src="https://ezoui.com/components/gk-loader/gk-loader.min.js"></script> -->
+  <!-- Export JS  -->
+</head>
+
+<body>
+  <!-- Page: home  -->
+  <div id="home" data-role="page">
+    <!-- <div data-role="header" data-position="fixed">
+      <h3>Header</h3> 
+    </div> -->
+    <div role="main" class="ui-content">
+      <h1 is="gk-text" style="text-align:center;">Wee Sports!</h1> 
+      <div class="ui-grid-a" style="height:25%;width:100%">
+        <div class="ui-block-a" style="width:45%;margin:2.5%;background-color:#F38181;" onclick="javascript:location.href='#Page1'"> 
+          <img is="dragable" src="https://lh5.googleusercontent.com/-0A2gwHnDmqg/Uw2QRVfq3XI/AAAAAAAA3PE/lTSK7NlbrLk/s000/house.png" style="width:45%; margin:20% 0px 20% 30%;">
+        </div>
+
+        <div class="ui-block-b" style="width:45%;margin:2.5%;background-color:#D6F7AD" onclick="javascript:location.href='#Page2'">
+          <img is="dragable" src="https://lh3.googleusercontent.com/-rG-ykuzrtWw/Uw2QSf2U34I/AAAAAAAA3Pg/Z6pjvUiBCSs/s000/speaker.png" style="width:45%; margin:20% 0px 20% 30%;">
+        </div>
+      </div>
+      <div class="ui-grid-a" style="height:25%;width:100%">
+        <div class="ui-block-a" style="width:45%;margin:2.5%;background-color:#FCE38A;" onclick="javascript:location.href='#Page3'">
+          <img is="dragable" src="https://lh5.googleusercontent.com/-PDT9W4M6E2Y/Uw2QQoRNiQI/AAAAAAAA3O4/t3GOvaPQrzs/s000/favourite.png" style="width:45%; margin:20% 0px 20% 30%;">
+        </div>
+        <div class="ui-block-b" style="width:45%;margin:2.5%;background-color:#95E1D3;" onclick="javascript:location.href='#Page4'">
+          <img is="dragable" src="https://lh3.googleusercontent.com/-SDBmdP8EsYU/Uw2QRnxHizI/AAAAAAAA3PM/Ued2dF73kus/s000/location.png" style="width:45%; margin:20% 0px 20% 30%;">
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <!-- <div data-role="footer" data-position="fixed" style="text-align:center">
+      footer
+    </div> -->
+    <div>
+      <i class="fa fa-question-circle" aria-hidden="true" style="position:fixed;bottom:25px;right:70px;font-size:30px"  onclick="javascript:location.href='#AboutUs'"></i>
+      <i class="fa fa-cog" aria-hidden="true" style="position:fixed;bottom:25px;right:25px;font-size:30px"  onclick="javascript:location.href='#Setting'"></i>
+    </div>
+    
+  </div>
+
+  <!-- Page: Page1  -->
+  <div id="Page1" data-role="page">
+    <div role="main" class="ui-content">
+      <div class="ui-field-contain" style="width:100%">
+        <!-- <label for="gk-124URbJ" style="display:inline-block;">選擇日期</label> -->
+        <input id="gk-124URbJ" type="date" style="display: inline-block;">
+      </div>
+    </div>
+    <div onclick="javascript:location.href='#home'" style="position:fixed;bottom:25px;right:25px;">BACK</div>
+  </div>
+  <!-- Page: Page2  -->
+  <div id="Page2" data-role="page">
+    <div role="main" class="ui-content">
+      <div class="ui-field-contain" style="width:100%">
+        page2
+      </div>
+    </div>
+    <div onclick="javascript:location.href='#home'" style="position:fixed;bottom:25px;right:25px;">BACK</div>
+  </div>
+  <!-- Page: Page3  -->
+  <div id="Page3" data-role="page">
+    <div role="main" class="ui-content">
+      <div class="ui-field-contain" style="width:100%">
+        page3
+      </div>
+    </div>
+    <div onclick="javascript:location.href='#home'" style="position:fixed;bottom:25px;right:25px;">BACK</div>
+  </div>
+  <!-- Page: Page4  -->
+  <div id="Page4" data-role="page">
+    <div role="main" class="ui-content">
+      <div class="ui-field-contain" style="width:100%">
+        page4
+      </div>
+    </div>
+    <div onclick="javascript:location.href='#home'" style="position:fixed;bottom:25px;right:25px;">BACK</div>
+  </div>
+  <!-- Page: Setting  -->
+  <div id="Setting" data-role="page">
+    <div role="main" class="ui-content">
+      <div class="ui-field-contain" style="width:100%">
+        Setting
+      </div>
+    </div>
+    <div onclick="javascript:location.href='#home'" style="position:fixed;bottom:25px;right:25px;">BACK</div>
+  </div>
+  <!-- Page: AboutUs  -->
+  <div id="AboutUs" data-role="page">
+    <div role="main" class="ui-content">
+      <div class="ui-field-contain" style="width:100%">
+        About Us
+      </div>
+    </div>
+    <div onclick="javascript:location.href='#home'" style="position:fixed;bottom:25px;right:25px;">BACK</div>
+  </div>
+
+</body>
+<script src="weesports.js"></script>
+</html>
+
