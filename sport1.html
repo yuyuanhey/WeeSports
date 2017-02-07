@@ -32,43 +32,39 @@
   <script components="https://ezoui.com/components/gk-ext/json-listview.html,https://ezoui.com/components/gk-jquerymobile/listview-li.html,https://ezoui.com/components/gk-ext/gk-text.html,https://ezoui.com/components/gk-ext/image.html" callback="mobileInitPage" src="https://ezoui.com/components/gk-loader/gk-loader.min.js"></script>
   <!-- Export JS  -->
   <script>
-    // $(document).on("pageinit", "#sport1", function () {
-    //   var $ele = $("#gk-27AbgC"),
-    //     url = $ele.attr("service");
-    //   if (url) {
-    //     $.getJSON(url).complete(function (data) {
-    //       $("#gk-27AbgC").gk("model", $.parseJSON(data.responseText));
-    //     });
-    //   }
-    // });
+    $(document).on("pageinit", "#sport1", function () {
+      var $ele = $("#gk-27AbgC");
+      //   url = $ele.attr("service");
+      // if (url) {
+      //   $.getJSON(url).complete(function (data) {
+      //     $("#gk-27AbgC").gk("model", $.parseJSON(data.responseText));
+      //   });
+      // }
+      var data = [{
+        'name': '台大資管男籃',
+        'time': '2017/12/31 12:00'
+      }, {
+        'name': '台大國企男籃',
+        'time': '2017/1/31 17:00'
+      }, {
+        'name': '台大會計男籃',
+        'time': '2017/2/15 13:30'
+      }, {
+        'name': '台大化工男籃',
+        'time': '2017/12/3 12:30'
+      }];
+      $ele.gk().model(data);
+    });
   </script>
-  <style>
-    #home .ui-content .ui-grid-a{
-      height: 27vh;
-    }
-    #home .ui-content .ui-block-a, #home  .ui-content .ui-block-b{
-      height:100%;
-      padding:5% 10% 5% 10%;
-      background:white;
-      border:1px grey solid;
-    }
-    .ui-block-a img, .ui-block-b img{
-      width: 100%;
-      margin-bottom: 10%;
-    }
-    .ui-grid-a{
-      /*div[is="gk-text"]*/
-      text-align: center;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- Page: home  -->
-  <div id="home" data-role="page">
+  <!-- Page: sport1  -->
+  <div id="sport1" data-role="page">
     <div data-role="header" data-position="fixed">
-      <!--<h3>Wee Sport!</h3>-->
-      <div data-role="navbar">
+      <h1 is="gk-text">Text</h1>
+      <i></i>
+      <!-- <div data-role="navbar">
         <ul>
           <li></li>
           <li></li>
@@ -80,42 +76,28 @@
             <a data-icon="info"></a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
-    <div role="main" class="ui-content" style="padding:0px;height:100%">
-      <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/baseball.jpg">
-          <div is="gk-text">baseball</div>
-        </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/basketball.jpg">
-          <div is="gk-text">basketball</div>
-        </div>
-      </div>
-      <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/volleyball.jpg">
-          <div is="gk-text">volleyball</div>
-        </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/table-tennis.jpg">
-          <div is="gk-text">table-tennis</div>
-        </div>
-      </div>
-      <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/badminton.jpg" >
-          <div is="gk-text">badminton</div>
-        </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/others.jpg">
-          <div is="gk-text">others</div>
+    <div role="main" class="ui-content">
+      <ul id="gk-27AbgC" data-role="listview" data-autodividers="true" data-inset="true" is="json-listview">
+        
+        <li is="listview-li">
+        <!-- clicking on each list item can see more information -->
+          <a href="#popupDetail" data-rel="popup" data-position-to="window" class="" data-transition="pop">
+            <div style="background:pink;height:30px;width:10%;display:inline-block;border-radius:100%"></div>
+            <div style="display:inline-block;width:50%">{{name}}<br>{{time}}</div>
+            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="display:inline-block;width:30%;height:30px;padding:0px;margin:0px">Join!</button>
+          </a>
+        </li>
+      </ul>
+      <!-- more infomation -->
+      <div data-role="popup" id="popupDetail" data-theme="a" class="ui-corner-all">
+        <div style="padding:10px 20px;">
+            {{name}}<br>
+            {{time}}<br>
         </div>
       </div>
     </div>
-
-    <!-- footer -->
     <div data-position="fixed" data-role="footer">
       <div data-role="navbar">
         <ul>
@@ -127,7 +109,7 @@
               <form>
                   <div style="padding:10px 20px;">
                       <h3>新增比賽</h3>
-
+                      
                       <!-- 選擇運動種類 -->
                       <div class="ui-field-contain">
                         <label for="select-custom-22"></label>
@@ -159,7 +141,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
