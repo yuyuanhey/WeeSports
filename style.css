@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+  text-shadow: none !important;
+ 
+}
+*:not(i){
+   font-family: 'Open Sans', sans-serif !important;
+}
+div [data-role="header"], div [data-role="footer"], div[data-role="navbar"]{
+  height: 6.5vh;
+  background:#B4F1F1 !important;
+  color:#1E6262 !important;
+  text-shadow: none !important;
+}
+.add{
+  background:transparent !important;
+  border:none !important;
+  text-shadow: none !important;
+}
