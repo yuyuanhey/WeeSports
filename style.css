@@ -1,19 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-body{
-  text-shadow: none !important;
- 
+@font-face {
+    font-family:"AgencyFBRegular";
+    src: url("agencyr.eot") /* EOT file for IE */
+}
+@font-face {
+    font-family:"AgencyFBRegular";
+    src: url("Agency_FB.ttf") /* TTF file for CSS3 browsers */
 }
 *:not(i){
-   font-family: 'Open Sans', sans-serif !important;
+  /*font-family: Microsoft JhengHei,  sans-serif;*/
+   /*font-family: 'Open Sans', sans-serif !important;*/
+   /*overflow-y:hidden;*/
+}
+body{
+  font-family:Microsoft JhengHei, 'Open Sans', sans-serif;
+  text-shadow: none;
+  color:#59606D;
+  background-color:#BFD8EF;
+  /*background:-webkit-linear-gradient(white,#BFD8EF);*/
+  /*background: -o-linear-gradient(white,#BFD8EF);*/
+  /*background: -moz-linear-gradient(white,#BFD8EF);*/
+  /*background: linear-gradient(white,#BFD8EF);*/
+}
+a{
+  text-decoration: none;
+  color:inherit;
+  /*font-size:inherit;*/
 }
 div [data-role="header"], div [data-role="footer"], div[data-role="navbar"]{
+  font-family:'Agency FB';
   height: 6.5vh;
-  background:#B4F1F1 !important;
-  color:#1E6262 !important;
-  text-shadow: none !important;
+  background:#86C1D4;
+  text-shadow: none;
+  border:none;
 }
-.add{
-  background:transparent !important;
-  border:none !important;
-  text-shadow: none !important;
+.header-logo{
+  float:left;
+  font-size:5.5vh;
+  padding:0vh 0px 1vh 1vh;
+}
+.header-icon{
+  float:right;
+  font-size:5.5vh;
+  padding:0vh 2vh 1vh 0px;
+}
+.header-icon i{
+  padding-right:1vh;
+}
+.footer-logo{
+  width:100vw;
+  height:6.5vh;
+  font-size:5.5vh;
+  padding:0px 0px 0px 0px !important;
+  text-align:center;
+
 }

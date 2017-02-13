@@ -8,8 +8,8 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob: filesystem:">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.2/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <!-- my own css -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+  <!-- my own css -->
   <link rel="stylesheet" href="./style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -49,15 +49,15 @@
     #home .ui-content .ui-grid-a{
       height: 29vh;
     }
-    #home .ui-content .ui-block-a, #home  .ui-content .ui-block-b{
+    #home .ui-content .ui-block-a, #home .ui-content .ui-block-b{
       height:100%;
-      padding:5% 10% 5% 10%;
-      background:white;
-      border:1px grey solid;
+      padding:5% 5% 5% 5%;
+      /*background:white;*/
+      /*border:1px grey solid;*/
     }
     .ui-block-a img, .ui-block-b img{
       width: 100%;
-      margin-bottom: 10%;
+      /*margin-bottom: 10%;*/
     }
     .ui-grid-a{
       /*div[is="gk-text"]*/
@@ -66,90 +66,54 @@
   </style>
 </head>
 
-<body>
+<body style="overflow-y:hidden">
   <!-- Page: home  -->
   <div id="home" data-role="page">
-    <div data-role="header" data-position="fixed" style="height:7vh">
+    <div data-role="header" data-position="fixed">
       <!-- <h1 is="gk-text">Text</h1> -->
       <!-- <span></span> -->
-      <div style="float:left;font-size:3.5vh;padding:1.5vh 0px 1.5vh 2vh">Wee Sport!</div>
-      <div style="float:right;font-size:3.5vh;padding:1.5vh 2vh 1.5vh 0px">
-        <i class="fa fa-home" aria-hidden="true" style="padding-right:2vh" onclick="javascript:location.href='./weesports.html'"></i>
-        <i class="fa fa-user" aria-hidden="true" style="padding-right:2vh" onclick="javascript:location.href='#'"></i>
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <!-- <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./weesports.html'"></i> -->
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
     </div>
     <div role="main" class="ui-content" style="padding:0px;height:100%">
       <div class="ui-grid-a">
         <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/baseball.jpg">
-          <div is="gk-text">baseball</div>
+          <img is="image" src="./photo/basketball.png">
+          <!-- <div is="gk-text">basketball</div> -->
         </div>
         <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/basketball.jpg">
-          <div is="gk-text">basketball</div>
+          <img is="image" src="./photo/volleyball.png">
+          <!-- <div is="gk-text">volleyball</div> -->
         </div>
       </div>
       <div class="ui-grid-a">
         <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/volleyball.jpg">
-          <div is="gk-text">volleyball</div>
+          <img is="image" src="./photo/baseball.png">
+          <!-- <div is="gk-text">baseball</div> -->
         </div>
         <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/table-tennis.jpg">
-          <div is="gk-text">table-tennis</div>
+          <img is="image" src="./photo/badminton.png">
+          <!-- <div is="gk-text">badminton</div> -->
         </div>
       </div>
       <div class="ui-grid-a">
         <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/badminton.jpg" >
-          <div is="gk-text">badminton</div>
+          <img is="image" src="./photo/table-tennis.png" >
+          <!-- <div is="gk-text">table-tennis</div> -->
         </div>
         <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
-          <img is="image" src="./photo/others.jpg">
-          <div is="gk-text">others</div>
+          <img is="image" src="./photo/others.png">
+          <!-- <div is="gk-text">others</div> -->
         </div>
       </div>
     </div>
-
     <!-- footer -->
     <div data-position="fixed" data-role="footer">
-      <a href="#popupAdd" data-rel="popup" data-position-to="window" class="add" data-transition="pop"><div style="width:100vw;">+</div></a>
-      <!-- clicking on this 'plus' icon can add a new play by popup form-->
-      <!-- <a href="#popupAdd" data-rel="popup" data-position-to="window" class="" data-transition="pop">+</a> -->
-
-      <!-- plus popup -->
-      <div data-role="popup" id="popupAdd" data-theme="a" class="ui-corner-all">
-        <form>
-            <div style="padding:10px 20px;">
-                <h3>新增比賽</h3>
-                
-                <!-- 選擇運動種類 -->
-                <div class="ui-field-contain">
-                  <label for="select-custom-22"></label>
-                  <select name="select-custom-22" id="select-custom-22" data-native-menu="false">
-                      <option>選擇運動種類</option>
-                      <option value="1">棒球</option>
-                      <option value="2">籃球</option>
-                      <option value="3">排球</option>
-                      <option value="4">桌球</option>
-                      <option value="5">羽球</option>
-                      <option value="6">其他</option>
-                  </select>
-                </div>
-                <!-- 輸入舉辦地點 -->
-                <input type="text" name="user" id="un" value="" placeholder="舉辦地點" data-theme="a">
-                <!-- 輸入日期與時間 -->
-                <input type="datetime-local" data-clear-btn="false" name="datetime-1" id="datetime-1" value="">
-                <!-- 輸入連絡電話 -->
-                <input type="tel" data-clear-btn="false" name="tel-1" id="tel-1" value="" placeholder="連絡電話">
-                <!-- 備註 -->
-                <textarea name="textarea-1" id="textarea-1" placeholder="備註"></textarea>
-                <!-- 提交表單 -->
-                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Submit</button>
-            </div>
-        </form>
-      </div>
-      <!-- plus popup end -->
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:location.href='./newgame.html'">CREATE NEW GAME!</div>
     </div>
   </div>
 

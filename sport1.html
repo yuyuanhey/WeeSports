@@ -8,7 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob: filesystem:">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.2/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
   <!-- my own css -->
   <link rel="stylesheet" href="./style.css">
 
@@ -48,6 +48,18 @@
     }, {
       'name': '台大化工男籃',
       'time': '2017/12/3 12:30'
+    }, {
+      'name': '台大會計男籃',
+      'time': '2017/2/15 13:30'
+    }, {
+      'name': '台大會計男籃',
+      'time': '2017/2/15 13:30'
+    }, {
+      'name': '台大會計男籃',
+      'time': '2017/2/15 13:30'
+    }, {
+      'name': '台大會計男籃',
+      'time': '2017/2/15 13:30'
     }];
     $(document).on("pageinit", "#sport1", function () {
       var $ele = $("#gk-27AbgC");
@@ -62,17 +74,27 @@
   </script>
 </head>
 
-<body>
+<body style="overflow-y:scroll">
   <!-- Page: sport1  -->
   <div id="sport1" data-role="page">
-    <div data-role="header" data-position="fixed" style="height:7vh">
+    <div data-role="header" data-position="fixed">
       <!-- <h1 is="gk-text">Text</h1> -->
       <!-- <span></span> -->
-      <div style="float:left;font-size:3.5vh;padding:1.5vh 0px 1.5vh 2vh">Wee Sport!</div>
-      <div style="float:right;font-size:3.5vh;padding:1.5vh 2vh 1.5vh 0px">
-        <i class="fa fa-home" aria-hidden="true" style="padding-right:2vh" onclick="javascript:location.href='./weesports.html'"></i>
-        <i class="fa fa-user" aria-hidden="true" style="padding-right:2vh" onclick="javascript:location.href='#'"></i>
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./weesports.html'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
+    </div>
+    <div data-role="navbar" data-grid="d">
+      <ul>
+        <li><a href="#" class="ui-btn-active">one</a></li>
+        <li><a href="#">two</a></li>
+        <li><a href="#">three</a></li>
+        <li><a href="#">four</a></li>
+        <li><a href="#">five</a></li>
+        <!-- <li><a href="#">six</a></li> -->
+      </ul>
     </div>
     <div role="main" class="ui-content">
       <ul id="gk-27AbgC" data-role="listview" data-autodividers="true" data-inset="true" is="json-listview">
@@ -94,46 +116,10 @@
         </div>
       </div>
     </div>
-
-    
+    <!-- footer -->
     <div data-position="fixed" data-role="footer">
-    <a href="#popupAdd" data-rel="popup" data-position-to="window" class="add" data-transition="pop"><div style="width:100vw;">+</div></a>
-      <!-- clicking on this 'plus' icon can add a new play by popup form-->
-      <!-- <a href="#popupAdd" data-rel="popup" data-position-to="window" class="" data-transition="pop">+</a> -->
-
-      <!-- plus popup -->
-      <div data-role="popup" id="popupAdd" data-theme="a" class="ui-corner-all">
-        <form>
-            <div style="padding:10px 20px;">
-                <h3>新增比賽</h3>
-                
-                <!-- 選擇運動種類 -->
-                <div class="ui-field-contain">
-                  <label for="select-custom-22"></label>
-                  <select name="select-custom-22" id="select-custom-22" data-native-menu="false">
-                      <option>選擇運動種類</option>
-                      <option value="1">棒球</option>
-                      <option value="2">籃球</option>
-                      <option value="3">排球</option>
-                      <option value="4">桌球</option>
-                      <option value="5">羽球</option>
-                      <option value="6">其他</option>
-                  </select>
-                </div>
-                <!-- 輸入舉辦地點 -->
-                <input type="text" name="user" id="un" value="" placeholder="舉辦地點" data-theme="a">
-                <!-- 輸入日期與時間 -->
-                <input type="datetime-local" data-clear-btn="false" name="datetime-1" id="datetime-1" value="">
-                <!-- 輸入連絡電話 -->
-                <input type="tel" data-clear-btn="false" name="tel-1" id="tel-1" value="" placeholder="連絡電話">
-                <!-- 備註 -->
-                <textarea name="textarea-1" id="textarea-1" placeholder="備註"></textarea>
-                <!-- 提交表單 -->
-                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Submit</button>
-            </div>
-        </form>
-      </div>
-      <!-- plus popup end -->
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:location.href='./newgame.html'">CREATE NEW GAME!</div>
     </div>
   </div>
 </body>
