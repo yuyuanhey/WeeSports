@@ -87,35 +87,24 @@
         <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
     </div>
-    <div data-role="navbar" data-grid="d">
+<!--     <div data-role="navbar" data-grid="d">
       <ul>
         <li><a href="#" class="ui-btn-active">one</a></li>
         <li><a href="#">two</a></li>
         <li><a href="#">three</a></li>
         <li><a href="#">four</a></li>
         <li><a href="#">five</a></li>
-        <!-- <li><a href="#">six</a></li> -->
+        <li><a href="#">six</a></li>
       </ul>
-    </div>
+    </div> -->
     <div role="main" class="ui-content">
       <ul id="gk-27AbgC" data-role="listview" data-autodividers="true" data-inset="true" is="json-listview">
-        
         <li is="listview-li">
-        <!-- clicking on each list item can see more information -->
-          <a href="#popupDetail" data-rel="popup" data-position-to="window" class="" data-transition="pop">
-            <div style="background:pink;height:30px;width:30px;display:inline-block;border-radius:100%"></div>
-            <div style="display:inline-block;width:50%">{{name}}<br>{{time}}</div>
-            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="display:inline-block;width:25%;height:30px;padding:0px;margin:0px;float:right;margin-top:10px">Join!</button>
-          </a>
+          <div style="background:pink;height:30px;width:30px;display:inline-block;border-radius:100%"></div>
+          <div style="display:inline-block;width:50%">{{name}}<br>{{time}}</div>
+          <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="display:inline-block;width:25%;height:30px;padding:0px;margin:0px;float:right;margin-top:10px">Join!</button>
         </li>
       </ul>
-      <!-- more infomation -->
-      <div data-role="popup" id="popupDetail" data-theme="a" class="ui-corner-all">
-        <div style="padding:10px 20px;">
-            {{name}}<br>
-            {{time}}<br>
-        </div>
-      </div>
     </div>
     <!-- footer -->
     <div data-position="fixed" data-role="footer">

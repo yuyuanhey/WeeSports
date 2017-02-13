@@ -88,7 +88,7 @@
       <div data-role="navbar">
         <ul>
           <li class="footer-logo-2" onclick="javascript:location.href='./sport1.html'">CANCEL</li>
-          <li class="footer-logo-2" onclick="javascript:location.href='#confirm'">SEND</li>
+          <li class="footer-logo-2" onclick="javascript:location.href='#confirm';myConfirm();">SEND</li>
         </ul>
       </div>
     </div>
@@ -110,23 +110,45 @@
         <div id="confirm-title">CONFIRM</div>
         <!-- 運動種類 -->
         <label for="mySport">SPORT:</label>
+        <div class="confirm-data" id="confirm-mySport"></div>
         <!-- 時間 -->
         <label for="myDate">DATE:</label>
+        <div class="confirm-data" id="confirm-myDate"></div>
         <label for="myTime">TIME:</label>
+        <div class="confirm-data" id="confirm-myTime"></div>
         <!-- 隊伍名稱 -->
         <label for="myTeam">TEAM:</label>
+        <div class="confirm-data" id="confirm-myTeam"></div>
         <!-- 比賽地點與NOTES -->
         <label for="myLoc">LOCATION:</label>
+        <div class="confirm-data" id="confirm-myLoc"></div>
         <label for="myNotes">NOTES:</label>
+        <div class="confirm-data" id="confirm-myNotes"></div>
         <!-- 聯絡資料 -->
         <label for="myInfo" style="display:block;margin-top:3vh">CONTACT INFO</label>
         <!-- <input type="checkbox" id="myInfo">同會員資料 -->
         <label for="myName">NAME:</label>
+        <div class="confirm-data" id="confirm-myName"></div>
         <label for="myPhone">PHONE:</label>
+        <div class="confirm-data" id="confirm-myPhone"></div>
         <label for="myEmail">EMAIL:</label>
+        <div class="confirm-data" id="confirm-myEmail"></div>
         <label for="myFB">FB LINK:</label>
+        <div class="confirm-data" id="confirm-myFB"></div>
         <label for="myLine">LINE ID:</label>
+        <div class="confirm-data" id="confirm-myLine"></div>
       </form>
+      <!-- CONFIRM pop-up -->
+      <div data-role="popup" id="confirm-popup" class="ui-content">
+        <div id="popup-title">
+          YOUR GAME HAS<br>
+          BEEN ADDED<br>
+          SUCCESSFULLY 
+        </div>
+        <div class="popup-btn" onclick="">CHECK MY INVITATION</div>
+        <div class="popup-btn" onclick="javascript:location.href='./sport1.html'">CHECK OTHER INVITATIONS</div>
+        <div class="popup-btn"><a href="#" data-rel="back" class="ui-icon-delete">CLOSE</a></div>
+      </div>
     </div>
     <!-- footer -->
     <div data-position="fixed" data-role="footer">
@@ -134,10 +156,27 @@
       <div data-role="navbar">
         <ul>
           <li class="footer-logo-2" onclick="javascript:location.href='#newgame'">EDIT</li>
-          <li class="footer-logo-2" onclick="javascript:location.href='./weesports.html'">SEND</li>
+          <li class="footer-logo-2"><a href="#confirm-popup" data-rel="popup" data-transition="pop">CONFIRM</a></li>
         </ul>
       </div>
     </div>
   </div>
 </body>
 </html>
+
+<script>
+  function myConfirm(){
+    $("#confirm-mySport").html($("#mySport").val());
+    $("#confirm-myDate").html($("#myDate").val());
+    $("#confirm-myTime").html($("#myTime").val());
+    $("#confirm-myTeam").html($("#myTeam").val());
+    $("#confirm-myLoc").html($("#myLoc").val());
+    $("#confirm-myNotes").html($("#myNotes").val());
+    $("#confirm-myName").html($("#myName").val());
+    $("#confirm-myPhone").html($("#myPhone").val());
+    $("#confirm-myEmail").html($("#myEmail").val());
+    $("#confirm-myFB").html($("#myFB").val());
+    $("#confirm-myLine").html($("#myLine").val());
+    // console.log($("#mySport").val());
+  }
+</script>
