@@ -1,33 +1,143 @@
-<!-- plus popup -->
-      <div data-role="popup" id="popupAdd" data-theme="a" class="ui-corner-all">
-        <form>
-            <div style="padding:10px 20px;">
-                <h3>新增比賽</h3>
-                
-                <!-- 選擇運動種類 -->
-                <div class="ui-field-contain">
-                  <label for="select-custom-22"></label>
-                  <select name="select-custom-22" id="select-custom-22" data-native-menu="false">
-                      <option>選擇運動種類</option>
-                      <option value="1">棒球</option>
-                      <option value="2">籃球</option>
-                      <option value="3">排球</option>
-                      <option value="4">桌球</option>
-                      <option value="5">羽球</option>
-                      <option value="6">其他</option>
-                  </select>
-                </div>
-                <!-- 輸入舉辦地點 -->
-                <input type="text" name="user" id="un" value="" placeholder="舉辦地點" data-theme="a">
-                <!-- 輸入日期與時間 -->
-                <input type="datetime-local" data-clear-btn="false" name="datetime-1" id="datetime-1" value="">
-                <!-- 輸入連絡電話 -->
-                <input type="tel" data-clear-btn="false" name="tel-1" id="tel-1" value="" placeholder="連絡電話">
-                <!-- 備註 -->
-                <textarea name="textarea-1" id="textarea-1" placeholder="備註"></textarea>
-                <!-- 提交表單 -->
-                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Submit</button>
-            </div>
-        </form>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>WeeSports</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob: filesystem:">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.2/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+  <!-- my own css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.autoInitializePage = false;
+      $.mobile.hashListeningEnabled = false;
+    });
+
+    function mobileInitPage() {
+      $.mobile.hashListeningEnabled = true;
+      $.mobile.initializePage();
+    }
+  </script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your app project -->
+  <!-- <script src="//ezoui.com/platforms/android_or_ios/cordova.js"></script> -->
+  <!-- GK Loader use RequireJS to load module -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+  <!--Plug in GK-->
+  <script src="https://ezoui.com/components/jquery.gk/jquery.gk.min.js"></script>
+  <!-- Load GK components -->
+  <script components="https://ezoui.com/components/gk-ext/json-listview.html,https://ezoui.com/components/gk-jquerymobile/listview-li.html,https://ezoui.com/components/gk-ext/gk-text.html,https://ezoui.com/components/gk-ext/image.html" callback="mobileInitPage" src="https://ezoui.com/components/gk-loader/gk-loader.min.js"></script>
+</head>
+
+<body style="overflow-y:hidden">
+  <!-- Page: CREATE A NEW GAME  -->
+  <div id="newgame" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='./sport1.html'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./weesports.html'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
-      <!-- plus popup end -->
+    </div>
+
+    <div role="main" class="ui-content">
+      <form id="newgame-form">
+        <div id="newgame-title">NEW GAME</div>
+        <!-- 運動種類 -->
+        <label for="mySport">SPORT:</label>
+        <input type="text" id="mySport">
+        <!-- 時間 -->
+        <label for="myDate">DATE:</label>
+        <input type="date" name="myDate" id="myDate" data-clear-btn="false">
+        <label for="myTime">TIME:</label>
+        <input type="time" name="myTime" id="myTime" data-clear-btn="false">
+        <!-- 隊伍名稱 -->
+        <label for="myTeam">TEAM:</label>
+        <input type="text" id="myTeam">
+        <!-- 比賽地點與NOTES -->
+        <label for="myLoc">LOCATION:</label>
+        <input type="text" id="myLoc">
+        <label for="myNotes">NOTES:</label>
+        <input type="text" id="myNotes">
+        <!-- 聯絡資料 -->
+        <label for="myInfo" style="display:block;margin-top:3vh">CONTACT INFO</label>
+        <!-- <input type="checkbox" id="myInfo">同會員資料 -->
+        <label for="myName">NAME:</label>
+        <input type="text" id="myName">
+        <label for="myPhone">PHONE:</label>
+        <input type="text" id="myPhone">
+        <label for="myEmail">EMAIL:</label>
+        <input type="text" id="myEmail">
+        <label for="myFB">FB LINK:</label>
+        <input type="text" id="myFB">
+        <label for="myLine">LINE ID:</label>
+        <input type="text" id="myLine">
+      </form>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div data-role="navbar">
+        <ul>
+          <li class="footer-logo-2" onclick="javascript:location.href='./sport1.html'">CANCEL</li>
+          <li class="footer-logo-2" onclick="javascript:location.href='#confirm'">SEND</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- Page: CONFIRM THE SENDING INFO -->
+  <div id="confirm" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='./sport1.html'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./weesports.html'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
+      </div>
+    </div>
+
+    <div role="main" class="ui-content">
+      <form id="confirm-form">
+        <div id="confirm-title">CONFIRM</div>
+        <!-- 運動種類 -->
+        <label for="mySport">SPORT:</label>
+        <!-- 時間 -->
+        <label for="myDate">DATE:</label>
+        <label for="myTime">TIME:</label>
+        <!-- 隊伍名稱 -->
+        <label for="myTeam">TEAM:</label>
+        <!-- 比賽地點與NOTES -->
+        <label for="myLoc">LOCATION:</label>
+        <label for="myNotes">NOTES:</label>
+        <!-- 聯絡資料 -->
+        <label for="myInfo" style="display:block;margin-top:3vh">CONTACT INFO</label>
+        <!-- <input type="checkbox" id="myInfo">同會員資料 -->
+        <label for="myName">NAME:</label>
+        <label for="myPhone">PHONE:</label>
+        <label for="myEmail">EMAIL:</label>
+        <label for="myFB">FB LINK:</label>
+        <label for="myLine">LINE ID:</label>
+      </form>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div data-role="navbar">
+        <ul>
+          <li class="footer-logo-2" onclick="javascript:location.href='#newgame'">EDIT</li>
+          <li class="footer-logo-2" onclick="javascript:location.href='./weesports.html'">SEND</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

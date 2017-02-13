@@ -48,10 +48,88 @@ div [data-role="header"], div [data-role="footer"], div[data-role="navbar"]{
   padding-right:1vh;
 }
 .footer-logo{
+  /*the footer only has one element*/
   width:100vw;
   height:6.5vh;
   font-size:5.5vh;
   padding:0px 0px 0px 0px !important;
   text-align:center;
+}
+.footer-logo-2{
+  /*the footer has two elements*/
+  display:inline-block;
+  width:50vw;
+  height:6.5vh;
+  font-size:5.5vh;
+  padding:0px 0px 0px 0px !important;
+  text-align:center;
+}
 
+/*NEW GAME*/
+#newgame-title{
+  font-family:'Agency FB',Microsoft JhengHei;
+  font-size:8vh;
+  font-weight:normal;
+  letter-spacing:3.9vw;
+  text-align:center;
+  padding-right:0px;
+  padding-left:0px;
+}
+#newgame-form,#confirm-form{
+  font-family:'Agency FB',Microsoft JhengHei;
+  font-size:3.5vh;
+}
+#newgame-form label{
+  width:30vw;
+  text-align:right;
+  font-weight:550;
+  display: inline-block;
+  padding:0px;
+  margin:0px;
+}
+#newgame-form input{
+  width:50vw;
+  padding:0px;
+  padding-left:10px;
+  margin:0px;
+  display:inline-flex;
+}
+.ui-input-text{
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  height:5vh;
+  border:none;
+  /*border-style:none none solid none;*/
+}
+.ui-checkbox{
+  display:inline-block;
+  text-align:left;
+  /*margin:10px;*/
+  /*padding:10px;*/
+}
+#myInfo{
+  display:block;
+}
+/*CONFIRM*/
+#confirm-title{
+  font-family:'Agency FB',Microsoft JhengHei;
+  font-size:8vh;
+  font-weight:normal;
+  letter-spacing:8.5vw;
+  text-align:center;
+  padding-right:0px;
+  padding-left:0px;
+  margin-right:0px;
+  margin-left:0px;
+  margin-bottom:1.2vh;
+}
+#confirm-form label{
+  width:30vw;
+  text-align:right;
+  font-weight:550;
+  display: block;
+  padding:0px;
+  margin:0px;
+  height:5.8vh;
 }
