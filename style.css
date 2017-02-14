@@ -27,7 +27,7 @@ div [data-role="header"], div [data-role="footer"], div[data-role="navbar"]{
   background:#86C1D4;
   text-shadow: none;
   border:none;
-  /*position:fixed;*/
+  position:fixed;
 }
 .header-logo{
   float:left;
@@ -50,8 +50,9 @@ div [data-role="header"], div [data-role="footer"], div[data-role="navbar"]{
   padding:0px 0px 0px 0px !important;
   text-align:center;
 }
-.footer-logo-2{
+.ui-footer-fixed .footer-logo-2{
   /*the footer has two elements*/
+  position:static !important;
   display:inline-block;
   width:50vw;
   height:6.5vh;
