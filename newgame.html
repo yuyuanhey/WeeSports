@@ -26,8 +26,6 @@
     }
   </script>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <!-- Uncomment the following to include cordova in your app project -->
-  <!-- <script src="//ezoui.com/platforms/android_or_ios/cordova.js"></script> -->
   <!-- GK Loader use RequireJS to load module -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
   <!--Plug in GK-->
@@ -37,13 +35,14 @@
 </head>
 
 <body style="overflow-y:hidden">
+
   <!-- Page: CREATE A NEW GAME  -->
   <div id="newgame" data-role="page">
     <div data-role="header" data-position="fixed">
       <div class="header-logo">WeeSports</div>
       <div class="header-icon">
-        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='./sport1.html'"></i>
-        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./weesports.html'"></i>
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='./sport.html'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./index.html'"></i>
         <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
     </div>
@@ -87,7 +86,7 @@
       <!-- clicking on the footer would go to a new page-->
       <div data-role="navbar">
         <ul>
-          <li class="footer-logo-2" onclick="javascript:location.href='./sport1.html'">CANCEL</li>
+          <li class="footer-logo-2" onclick="javascript:location.href='./sport.html'">CANCEL</li>
           <li class="footer-logo-2" onclick="javascript:location.href='#confirm';myConfirm();">SEND</li>
         </ul>
       </div>
@@ -99,8 +98,8 @@
     <div data-role="header" data-position="fixed">
       <div class="header-logo">WeeSports</div>
       <div class="header-icon">
-        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='./sport1.html'"></i>
-        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./weesports.html'"></i>
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='./sport2.html'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./index.html'"></i>
         <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
     </div>
@@ -146,7 +145,7 @@
           SUCCESSFULLY 
         </div>
         <div class="popup-btn" onclick="">CHECK MY INVITATION</div>
-        <div class="popup-btn" onclick="javascript:location.href='./sport1.html'">CHECK OTHER INVITATIONS</div>
+        <div class="popup-btn" onclick="javascript:location.href='./sport.html'">CHECK OTHER INVITATIONS</div>
         <div class="popup-btn"><a href="#" data-rel="back" class="ui-icon-delete">CLOSE</a></div>
       </div>
     </div>

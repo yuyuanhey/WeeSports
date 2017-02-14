@@ -26,88 +26,49 @@
     }
   </script>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <!-- Uncomment the following to include cordova in your app project -->
-  <!-- <script src="//ezoui.com/platforms/android_or_ios/cordova.js"></script> -->
   <!-- GK Loader use RequireJS to load module -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
   <!--Plug in GK-->
   <script src="https://ezoui.com/components/jquery.gk/jquery.gk.min.js"></script>
   <!-- Load GK components -->
   <script components="https://ezoui.com/components/gk-ext/json-listview.html,https://ezoui.com/components/gk-jquerymobile/listview-li.html,https://ezoui.com/components/gk-ext/gk-text.html,https://ezoui.com/components/gk-ext/image.html" callback="mobileInitPage" src="https://ezoui.com/components/gk-loader/gk-loader.min.js"></script>
-  <!-- Export JS  -->
-  <script>
-    // $(document).on("pageinit", "#sport1", function () {
-    //   var $ele = $("#gk-27AbgC"),
-    //     url = $ele.attr("service");
-    //   if (url) {
-    //     $.getJSON(url).complete(function (data) {
-    //       $("#gk-27AbgC").gk("model", $.parseJSON(data.responseText));
-    //     });
-    //   }
-    // });
-  </script>
   <style>
-    #home .ui-content .ui-grid-a{
-      height: 29vh;
-    }
-    #home .ui-content .ui-block-a, #home .ui-content .ui-block-b{
-      height:100%;
-      padding:5% 5% 5% 5%;
-      /*background:white;*/
-      /*border:1px grey solid;*/
-    }
-    .ui-block-a img, .ui-block-b img{
-      width: 100%;
-      /*margin-bottom: 10%;*/
-    }
-    .ui-grid-a{
-      /*div[is="gk-text"]*/
-      text-align: center;
-    }
+    
   </style>
 </head>
 
 <body style="overflow-y:hidden">
   <!-- Page: home  -->
-  <div id="home" data-role="page">
+  <div id="home-login" data-role="page">
     <div data-role="header" data-position="fixed">
-      <!-- <h1 is="gk-text">Text</h1> -->
-      <!-- <span></span> -->
       <div class="header-logo">WeeSports</div>
       <div class="header-icon">
-        <!-- <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./weesports.html'"></i> -->
         <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
     </div>
     <div role="main" class="ui-content" style="padding:0px;height:100%">
       <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
+        <div class="ui-block-a" onclick="javascript:location.href='./sport.html'">
           <img is="image" src="./photo/basketball.png">
-          <!-- <div is="gk-text">basketball</div> -->
         </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
+        <div class="ui-block-b" onclick="javascript:location.href='./sport.html'">
           <img is="image" src="./photo/volleyball.png">
-          <!-- <div is="gk-text">volleyball</div> -->
         </div>
       </div>
       <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
+        <div class="ui-block-a" onclick="javascript:location.href='./sport.html'">
           <img is="image" src="./photo/baseball.png">
-          <!-- <div is="gk-text">baseball</div> -->
         </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
+        <div class="ui-block-b" onclick="javascript:location.href='./sport.html'">
           <img is="image" src="./photo/badminton.png">
-          <!-- <div is="gk-text">badminton</div> -->
         </div>
       </div>
       <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport1.html'">
+        <div class="ui-block-a" onclick="javascript:location.href='./sport.html'">
           <img is="image" src="./photo/table-tennis.png" >
-          <!-- <div is="gk-text">table-tennis</div> -->
         </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport1.html'">
+        <div class="ui-block-b" onclick="javascript:location.href='./sport.html'">
           <img is="image" src="./photo/others.png">
-          <!-- <div is="gk-text">others</div> -->
         </div>
       </div>
     </div>

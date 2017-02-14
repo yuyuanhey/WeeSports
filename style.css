@@ -69,6 +69,19 @@ a[data-rel="popup"]{
   padding:0px 0px 0px 0px !important;
 }
 
+/*HOMEPAGE*/
+#home .ui-grid-a, #home-login .ui-grid-a{
+  height: 29vh;
+  text-align: center;
+}
+#home .ui-block-a, #home-login .ui-block-a, #home .ui-block-b, #home-login .ui-block-b{
+  height:100%;
+  padding:5% 5% 5% 5%;
+}
+#home .ui-block-a img, #home-login .ui-block-a img, #home-login .ui-block-b img, #home .ui-block-b img{
+  width: 100%;
+}
+
 /*NEW GAME*/
 #newgame-title{
   font-family:'Agency FB',Microsoft JhengHei;
