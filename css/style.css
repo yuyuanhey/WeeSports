@@ -12,10 +12,6 @@ body{
   text-shadow: none;
   color:#59606D;
   background-color:#BFD8EF;
-  /*background:-webkit-linear-gradient(white,#BFD8EF);*/
-  /*background: -o-linear-gradient(white,#BFD8EF);*/
-  /*background: -moz-linear-gradient(white,#BFD8EF);*/
-  /*background: linear-gradient(white,#BFD8EF);*/
 }
 a{
   text-decoration: none;
@@ -71,7 +67,7 @@ a[data-rel="popup"]{
 
 /*HOMEPAGE*/
 #home .ui-grid-a, #home-login .ui-grid-a{
-  height: 29vh;
+  height: 25vh;
   text-align: center;
 }
 #home .ui-block-a, #home-login .ui-block-a, #home .ui-block-b, #home-login .ui-block-b{
@@ -80,6 +76,90 @@ a[data-rel="popup"]{
 }
 #home .ui-block-a img, #home-login .ui-block-a img, #home-login .ui-block-b img, #home .ui-block-b img{
   width: 100%;
+}
+
+/*SPORTS*/
+.ui-content{
+  font-family:'Agency FB', Microsoft JhengHei;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+#tabpanel ul.tab{
+  position:fixed;
+  z-index:100;
+}
+ul.tab {
+  display:table;
+  list-style:none;
+  width: 100%;
+  /*overflow-x:scroll;*/
+  /*list-style-type: none;*/
+  margin: 0px;
+  padding: 0;
+  /*overflow: hidden;*/
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+/* Float the list items side by side */
+ul.tab li {
+  display: table-cell;
+  background:#91DBF3;
+  float: left;
+  width:16.6667%;
+  margin:0;
+}
+/* Style the links inside the list items */
+ul.tab li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 6vw;
+}
+/* Change background color of links on hover */
+ul.tab li a:hover {
+  background-color: #ddd;
+}
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+  background-color: #ccc;
+}
+/* Style the tab content */
+.tabcontent {
+  position:relative;
+  display: none;
+  padding: 6.5vh 12px 1vh 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+.tabcontent.ui-li-static{
+  width:100%;
+  margin:0px;
+  padding:0px;
+}
+.ui-li-static li [is="listview-li"]{
+  width:100%;
+  margin:0px;
+  padding:0px;
+  height:15vh !important;
+  background:red;
+  color:red !important;
+}
+/*.ui-li-static{
+  height:10vh;
+  margin:0px;
+  padding:0px;
+}*/
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 /*NEW GAME*/

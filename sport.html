@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.2/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
-  <!-- my own css -->
+  <!-- my own css and js-->
   <link rel="stylesheet" href="./css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -60,7 +60,7 @@
       'name': '台大會計男籃',
       'time': '2017/2/15 13:30'
     }];
-    $(document).on("pageinit", "#sport1", function () {
+    $(document).on("pageinit", "#sport", function () {
       var $ele = $("#gk-27AbgC");
       //   url = $ele.attr("service");
       // if (url) {
@@ -75,7 +75,7 @@
 
 <body style="overflow-y:scroll">
   <!-- Page: sport1  -->
-  <div id="sport1" data-role="page">
+  <div id="sport" data-role="page">
     <div data-role="header" data-position="fixed">
       <div class="header-logo">WeeSports</div>
       <div class="header-icon">
@@ -83,24 +83,41 @@
         <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
       </div>
     </div>
-<!--     <div data-role="navbar" data-grid="d">
-      <ul>
-        <li><a href="#" class="ui-btn-active">one</a></li>
-        <li><a href="#">two</a></li>
-        <li><a href="#">three</a></li>
-        <li><a href="#">four</a></li>
-        <li><a href="#">five</a></li>
-        <li><a href="#">six</a></li>
-      </ul>
-    </div> -->
     <div role="main" class="ui-content">
-      <ul id="gk-27AbgC" data-role="listview" data-autodividers="true" data-inset="true" is="json-listview">
-        <li is="listview-li">
-          <div style="background:pink;height:30px;width:30px;display:inline-block;border-radius:100%"></div>
-          <div style="display:inline-block;width:50%">{{name}}<br>{{time}}</div>
-          <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="display:inline-block;width:25%;height:30px;padding:0px;margin:0px;float:right;margin-top:10px">Join!</button>
-        </li>
-      </ul>
+      <div id="tabpanel">
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport1')">籃球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport2')">排球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport3')">棒球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport4')">羽球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport5')">桌球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport6')">其他</a></li>
+        </ul>
+        <div id="sport1" class="tabcontent">
+          <ul id="gk-27AbgC" data-role="listview" data-autodividers="true" data-inset="true" is="json-listview">
+            <li is="listview-li">
+              <div style="background:pink;height:30px;width:30px;display:inline-block;border-radius:100%"></div>
+              <div style="display:inline-block;width:50%">{{name}}<br>{{time}}</div>
+              <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="display:inline-block;width:25%;height:30px;padding:0px;margin:0px;float:right;margin-top:10px">Join!</button>
+            </li>
+          </ul>
+        </div>
+        <div id="sport2" class="tabcontent">
+          tab2
+        </div>
+        <div id="sport3" class="tabcontent">
+          tab3
+        </div>
+        <div id="sport4" class="tabcontent">
+          tab4
+        </div>
+        <div id="sport5" class="tabcontent">
+          tab5
+        </div>
+        <div id="sport6" class="tabcontent">
+          tab6
+        </div>
+      </div>
     </div>
     <!-- footer -->
     <div data-position="fixed" data-role="footer">
@@ -111,3 +128,4 @@
 </body>
 
 </html>
+<script src="./js/index.js"></script>

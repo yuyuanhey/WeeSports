@@ -33,17 +33,26 @@
   <!-- Load GK components -->
   <script components="https://ezoui.com/components/gk-ext/json-listview.html,https://ezoui.com/components/gk-jquerymobile/listview-li.html,https://ezoui.com/components/gk-ext/gk-text.html,https://ezoui.com/components/gk-ext/image.html" callback="mobileInitPage" src="https://ezoui.com/components/gk-loader/gk-loader.min.js"></script>
   <style>
-    
+    #home-login-btn{
+      font-size:4vh;
+      font-weight:bold;
+      height:5vh;
+      padding:.5px 5px;
+      margin:0.5vh 5px 0.5vh 0px;
+      background:#95E1D3;
+      border-radius:2px;
+    }
   </style>
 </head>
 
 <body style="overflow-y:hidden">
-  <!-- Page: home  -->
+  <!-- Page: home-login -->
   <div id="home-login" data-role="page">
     <div data-role="header" data-position="fixed">
       <div class="header-logo">WeeSports</div>
       <div class="header-icon">
-        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
+        <div id="home-login-btn">LOGIN</div>
+        <!-- <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i> -->
       </div>
     </div>
     <div role="main" class="ui-content" style="padding:0px;height:100%">
