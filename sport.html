@@ -68,7 +68,7 @@
       //     $("#gk-27AbgC").gk("model", $.parseJSON(data.responseText));
       //   });
       // }
-      $ele.gk().model(data);
+      //$ele.gk().model(data);
     });
   </script>
 </head>
@@ -86,24 +86,22 @@
     <div role="main" class="ui-content">
       <div id="tabpanel">
         <ul class="tab">
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport1')">籃球</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport2')">排球</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport3')">棒球</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport4')">羽球</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport5')">桌球</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openSport(event,'sport6')">其他</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">籃球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">排球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">棒球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">羽球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">桌球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">其他</a></li>
         </ul>
         <div id="sport1" class="tabcontent">
-          <ul id="gk-27AbgC" data-role="listview" data-autodividers="true" data-inset="true" is="json-listview">
-            <li is="listview-li">
-              <div style="background:pink;height:30px;width:30px;display:inline-block;border-radius:100%"></div>
-              <div style="display:inline-block;width:50%">{{name}}<br>{{time}}</div>
-              <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="display:inline-block;width:25%;height:30px;padding:0px;margin:0px;float:right;margin-top:10px">Join!</button>
-            </li>
-          </ul>
+            <div style="border:1px solid black">
+              系隊名<br>時間
+            </div>
         </div>
         <div id="sport2" class="tabcontent">
-          tab2
+            <div style="border:1px solid black">
+              系隊名<br>時間
+            </div>
         </div>
         <div id="sport3" class="tabcontent">
           tab3
