@@ -1,15 +1,22 @@
 var current_tab, next_tab, previous_tab;
+
+
 $(".sports").click(function(){
 	location.replace("./sport.html");
-	// location.href='./sport.html';
-	console.log("hi");
 	var index = $(".sports").index(this);
-	
-	var select = ":nth-child(" + index + ")";
-	$(".tablinks"+select).css("background","white");
-	index = index + 1;
-	current_tab = "sport"+index;
+	setTab(index);
 });
+
+// function setTab(index){
+// 	if(index === 0){
+// 		$(".tablinks:first-child").css("background","white");
+// 	}
+// 	else{
+// 		var temp = ".tablinks:nth-child(" + index + ")";
+// 		$(temp).css("background", "white");
+// 	}
+// 	console.log("tab");
+// }
 
 $("#sport1").show();
 $(".tablinks:first").css("background","white");
