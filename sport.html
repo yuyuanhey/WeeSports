@@ -60,21 +60,11 @@
       'name': '台大會計男籃',
       'time': '2017/2/15 13:30'
     }];
-    $(document).on("pageinit", "#sport", function () {
-      var $ele = $("#gk-27AbgC");
-      //   url = $ele.attr("service");
-      // if (url) {
-      //   $.getJSON(url).complete(function (data) {
-      //     $("#gk-27AbgC").gk("model", $.parseJSON(data.responseText));
-      //   });
-      // }
-      //$ele.gk().model(data);
-    });
   </script>
 </head>
 
 <body style="overflow-y:scroll">
-  <!-- Page: sport1  -->
+  <!-- Page: sport  -->
   <div id="sport" data-role="page">
     <div data-role="header" data-position="fixed">
       <div class="header-logo">WeeSports</div>
@@ -93,28 +83,71 @@
           <li><a href="javascript:void(0)" class="tablinks">桌球</a></li>
           <li><a href="javascript:void(0)" class="tablinks">其他</a></li>
         </ul>
-        <div id="sport1" class="tabcontent">
-            <div style="border:1px solid black">
-              系隊名<br>時間
-            </div>
+        <div id="sport1" class="tabcontent"></div>
+        <div id="sport2" class="tabcontent"></div>
+        <div id="sport3" class="tabcontent"></div>
+        <div id="sport4" class="tabcontent"></div>
+        <div id="sport5" class="tabcontent"></div>
+        <div id="sport6" class="tabcontent"></div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:location.href='./newgame.html'">CREATE NEW GAME!</div>
+    </div>
+  </div>
+
+  <!-- Page: joinInfo -->
+  <div id="joinInfo" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#sport'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./index.html'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="font-family:Microsoft JhengHei">
+      <div style="margin:4vh 2vw;height:12vh">
+        <div id="joinCircle"></div>
+        <div id="joinTeam">系隊名</div>
+        <a href="#reply-popup" data-rel="popup" data-transition="pop"><div class="joinReply">REPLY!</div></a>
+      </div>
+      <div style="margin:3vh 0px 3vh 10vw;height:13vh">
+        <div id="joinTime">日期/時間:</div>
+        <div id="joinPlace">地點:</div>
+        <div id="joinRemark">備註:</div>
+      </div>
+      <div id="joinTable">
+        <div id="tLeft">
+          <div id="joinComment"><b>歷史評價</b></div>
+          <!-- <div><div style='text-align:left'>Good Game!</div><div style="text-align:right">2016/12/20</div></div> -->
+          <!-- <div><div>球品好</div><div>2016/12/20</div></div> -->
+          <!-- <div><div>準時!</div><div>2016/12/20</div></div> -->
         </div>
-        <div id="sport2" class="tabcontent">
-            <div style="border:1px solid black">
-              系隊名<br>時間
-            </div>
+        <div id="tRight">
+          <div id="joinReplyer"><b>同時REPLY的隊伍</b></div>
+          <!-- <div>台大國企男籃</div> -->
+          <!-- <div>台大會計男籃</div> -->
         </div>
-        <div id="sport3" class="tabcontent">
-          tab3
+      </div>
+      <div id="joinContact">
+        <div><b>聯絡資訊</b></div>
+        <div id="joinName">姓名:</div>
+        <div id="joinPhone">手機:</div>
+        <div id="joinEmail">EMAIL:</div>
+        <div id="joinFB">FB:</div>
+        <div id="joinLine">LINE ID:</div>
+      </div> 
+      <!-- CONFIRM pop-up -->
+      <div data-role="popup" id="reply-popup" class="ui-content">
+        <div id="reply-title">
+          <div style="font-size:8vw"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="font-size:10vw"></i>確定回覆邀請嗎?</div>
+          請注意! blablablabla的注意事項
         </div>
-        <div id="sport4" class="tabcontent">
-          tab4
-        </div>
-        <div id="sport5" class="tabcontent">
-          tab5
-        </div>
-        <div id="sport6" class="tabcontent">
-          tab6
-        </div>
+        <div class="popup-btn" onclick="" style="display:inline-table;width:40%;margin:2vh 3vw;position:absolute;bottom:0px;left:0px"><a href="#" data-rel="back">CANCEL</a></div>
+        <div class="popup-btn" id="reply-yes" style="display:inline-table;width:40%;margin:2vh 3vw;position:absolute;bottom:0px;right:0px"><a href="#" data-rel="back">YES</a></div>
       </div>
     </div>
     <!-- footer -->

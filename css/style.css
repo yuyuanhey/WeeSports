@@ -123,14 +123,6 @@ ul.tab li a {
   transition: 0.3s;
   font-size: 6vw;
 }
-/* Change background color of links on hover */
-/*ul.tab li a:hover {
-  background-color: #ddd;
-}*/
-/* Create an active/current tablink class */
-/*ul.tab li a:focus, .active {
-  background-color: #ccc;
-}*/
 /* Style the tab content */
 .tabcontent {
   position:relative;
@@ -152,11 +144,6 @@ ul.tab li a {
   background:red;
   color:red !important;
 }
-/*.ui-li-static{
-  height:10vh;
-  margin:0px;
-  padding:0px;
-}*/
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -164,6 +151,126 @@ ul.tab li a {
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+.sportLi{
+  height:9vh;
+  padding:1vh;
+  margin: 0px;
+  margin-left: -5vw;
+  margin-right: -5vw;
+  border-style:none none solid none;
+  border-color:#7DB9DE;
+  border-width:2px;
+}
+.liCircle{
+  width:8vh;
+  height:8vh;
+  display: inline-block;
+  padding:0;
+  margin:0px 10px;
+  border-radius: 100%;
+  background:#2EA9DF;
+}
+.liTeam{
+  width:calc(60% - 8vh);
+  height:8vh;
+  font-size:3vh;
+  display: inline-block;
+  padding:0px 0px 0px 10px;
+  margin: 0;
+}
+.liJoin{
+  font-family:'Agency FB', Microsoft JhengHei;
+  font-size:4vh;
+  display:inline-block;
+  padding:3px 10px;
+  float:right;
+  margin: 2vh 7vw 1vh 0px;
+  background: #E0E0E0;
+  border:2px solid  #7DB9DE;
+}
+
+/* joinInfo */
+#joinCircle{
+  width:10vh;
+  height:10vh;
+  display: inline-block;
+  padding:0;
+  margin:0px 3vw;
+  border-radius: 100%;
+  background:#2EA9DF;
+}
+#joinTeam{
+  width:45%;
+  font-size:6vw;
+  display: inline-block;
+  vertical-align: middle;
+  padding:0px 0px 0px 1vw;
+  margin: -50px 0px 0px 0px;
+}
+.joinReply{
+  font-family:'Agency FB', Microsoft JhengHei;
+  font-size:4vh;
+  display:inline-block;
+  padding:3px 10px;
+  float:right;
+  margin: 2vh 3vw 1vh 0vw;
+  background: #E0E0E0;
+  border:2px solid  #7DB9DE;
+}
+#joinTable{
+  width:100%;
+  border-style:solid none none none;
+  border-color:grey;
+  border-width:1px;
+}
+#tLeft{
+  width:49vw;
+  height:50vh;
+  display:inline-table;
+  border-style:none solid none none;
+  border-color:grey;
+  border-width:1px;
+}
+#tLeft div, #tRight div{
+  padding-left:10px;
+}
+.joinCommentText{
+  text-align:left;
+  word-wrap: break-word;
+  margin-top:1.5vh;
+}
+.joinCommentTime{
+  text-align:right;
+  padding-right:10px;
+}
+#tRight{
+  width:49vw;
+  height:50vh;
+  display:inline-table;
+}
+#reply-popup{
+  background:#cccccc;
+  border:none;
+  height:60vh;
+  width:80vw;
+  margin:10vh 5vw 10vh 5vw;
+  padding:5vw 0px;
+}
+#reply-title{
+  font-family:Microsoft JhengHei;
+  font-size:5vw;
+  text-align:center;
+  margin-bottom:1.2vh;
+}
+#joinContact{
+  font-family:Microsoft JhengHei;
+  border:2px solid #7DB9DE;
+  width:80vw;
+  margin:5vh 10vw;
+}
+#joinContact div:not(:first-child){
+  margin-left:20px;
 }
 
 /*NEW GAME*/
