@@ -29,7 +29,7 @@ $(".tablinks").click(function(){
 	$(".tabcontent").hide();
 	$(panel).show();
 });
-
+// CALL AT END
 function buildTable(data, id, dataName){
 	var allid = 0; // 從0開始，一組資料總共有多少li allid就有多大(-1)
 	for(var i = 0; i < data.length; i++){
@@ -37,6 +37,8 @@ function buildTable(data, id, dataName){
 		var circleStyle = " style='background:";
 		var status = "JOIN!";
 		var circleColor = "#86C166'"; //未約:綠色
+
+        //
 		if(data[i].reply > 0)
 			circleColor = "#FBE251'"; //洽中:黃色
 		
@@ -52,7 +54,7 @@ function buildTable(data, id, dataName){
 		+ data[i].time + "</div><div class='liJoin'>" + status + "</div></div>";
 
 		$(id).append(content);
-		allid++;
+		//allid++;
 	}
 }
 var presentData;

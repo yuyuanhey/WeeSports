@@ -274,7 +274,7 @@ ul.tab li a {
 }
 
 /*NEW GAME*/
-#newgame-title{
+#newgame-title,#register-title,#myAccount-title{
   font-family:'Agency FB',Microsoft JhengHei;
   font-size:8vh;
   font-weight:normal;
@@ -283,11 +283,11 @@ ul.tab li a {
   padding-right:0px;
   padding-left:0px;
 }
-#newgame-form,#confirm-form{
+#newgame-form,#confirm-form,#register-form{
   font-family:'Agency FB',Microsoft JhengHei;
   font-size:3.5vh;
 }
-#newgame-form label{
+#newgame-form,#register-form label{
   width:30vw;
   text-align:right;
   font-weight:550;
@@ -295,7 +295,7 @@ ul.tab li a {
   padding:0px;
   margin:0px;
 }
-#newgame-form input{
+#newgame-form,#register-form input{
   width:50vw;
   padding:0px;
   padding-left:10px;
@@ -339,6 +339,7 @@ ul.tab li a {
   margin:0px;
   height:5.7vh;
 }
+
 .confirm-data{
   width:50vw;
   padding:0px;
@@ -369,4 +370,41 @@ ul.tab li a {
   padding:0px;
   margin:2vh 5vw 2vh 5vw;
   text-align:center;
+}
+#login_logo{
+
+
+
+
+}
+.login_form{
+  text-align:center;
+   font-size:2vw;
+}
+.login_form label{
+  width:30vw;
+  text-align:right;
+  font-weight:550;
+  display:inline;
+  padding:0px;
+  margin:0px;
+}
+.login_form input{
+  width:30vw;
+  padding:0px;
+  padding-left:10px;
+  margin:0px;
+  display:inline;
+}
+.myAccount {
+  position:relative;
+  text-align:center;
+  font-size: 5vh;
+  padding: 6.5vh 12px 1vh 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+#login_button{
+  font-size:4vh;
+  /*font-weight: */
 }

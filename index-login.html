@@ -56,38 +56,90 @@
       </div>
     </div>
     <div role="main" class="ui-content" style="padding:0px;height:100%">
-      <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport.html'">
-          <img is="image" src="./photo/basketball.png">
-        </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport.html'">
-          <img is="image" src="./photo/volleyball.png">
-        </div>
-      </div>
-      <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport.html'">
-          <img is="image" src="./photo/baseball.png">
-        </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport.html'">
-          <img is="image" src="./photo/badminton.png">
-        </div>
-      </div>
-      <div class="ui-grid-a">
-        <div class="ui-block-a" onclick="javascript:location.href='./sport.html'">
-          <img is="image" src="./photo/table-tennis.png" >
-        </div>
-        <div class="ui-block-b" onclick="javascript:location.href='./sport.html'">
-          <img is="image" src="./photo/others.png">
-        </div>
+      <div id="login_logo" style="padding:0px;height:300px;background-color:red">畫個logo?<img src="" alt=""></div>
+        <div id="login_input" >
+          <form class="login_form" method="post" action="/action_page_post.php"  >
+            <div class="ui-field-contain">
+
+            <label for="account">帳號:</label>
+            <input type="text" name="account" id="account">       
+            <label for="password">密碼:</label>
+            <input type="text" name="password" id="password">
+            
+            </div> 
+            <input id="login_button" type="submit"  value="login">
+            <input class="login_button" type="button" value="not a member?" data-inline="true" onclick="javascript:location.href='#register'"> 
+            <input class="login_button" type="button" value="forgot password?" data-inline="true">
+      
+          </form>
+    
       </div>
     </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" >WELCOME</div>
+    </div>
+  </div>
+  <div id="register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#home-login'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./index.html'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="padding:0px;height:100%">
+      <form id="register-form">
+        <div id="register-title">REGISTER</div>
+        <!-- 學號 -->
+        <label for="register_id">學號:</label>
+        <input type="text" id="register_id">
+        <!-- 姓名 -->
+        <label for="register_name">姓名:</label>
+        <input type="text"  id="register_name">
+        <label for="register_password">密碼:</label>
+        <input type="text" name="register_password" id="register_password">
+        <label for="register_department">系所:</label>
+        <input type="text" name="register_department" id="register_department">
+
+      </form>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:register()">JOIN ME</div> <!-- register() not ready -->
+
+
+    </div>
+  </div>
+  <div id="myAccount" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#home-login'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='./index.html'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="padding:0px;height:100%">
+      
+        <div id="myAccount-title">myAccount</div>
+        <div class="myAccount" id="myAccount_personalData">個人資料</div>
+        <div class="myAccount" id="myAccount_myBattle">我的約戰</div>
+        <div class="myAccount" id="myAccount_myReply">收到的回覆</div>
+        <div class="myAccount" id="myAccount_myRate">我的評價</div>
+        <div class="myAccount" id="myAccount_Rate">待評評價</div>
+      
+    </div>
+    <!-- footer -->
     <!-- footer -->
     <div data-position="fixed" data-role="footer">
       <!-- clicking on the footer would go to a new page-->
       <div class="footer-logo" onclick="javascript:location.href='./newgame.html'">CREATE NEW GAME!</div>
     </div>
   </div>
-
 </body>
 
 </html>
