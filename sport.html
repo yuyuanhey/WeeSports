@@ -81,24 +81,24 @@
     </div>
     <div role="main" class="ui-content" style="font-family:Microsoft JhengHei">
       <div style="margin:4vh 2vw;height:12vh">
-        <div id="joinCircle"></div>
+        <div id="joinCircle"><img src="./photo/yellow.png" style="width:100%"></div>
         <div id="joinTeam">系隊名</div>
         <a href="#reply-popup" data-rel="popup" data-transition="pop"><div class="joinReply">REPLY!</div></a>
       </div>
-      <div style="margin:3vh 0px 3vh 10vw;height:13vh">
-        <div id="joinTime">日期/時間:</div>
-        <div id="joinPlace">地點:</div>
-        <div id="joinRemark">備註:</div>
+      <div style="margin:3vh 0px 3vh 15vw;height:13vh;font-size:1.2em">
+        <div id="joinTime">日期/時間:　</div>
+        <div id="joinPlace">地點:　</div>
+        <div id="joinRemark">備註:　</div>
       </div>
       <div id="joinTable">
         <div id="tLeft">
-          <div id="joinComment"><b>歷史評價</b></div>
+          <div id="joinComment" style="font-size:1.2em"><b>歷史評價</b></div>
           <!-- <div><div style='text-align:left'>Good Game!</div><div style="text-align:right">2016/12/20</div></div> -->
           <!-- <div><div>球品好</div><div>2016/12/20</div></div> -->
           <!-- <div><div>準時!</div><div>2016/12/20</div></div> -->
         </div>
         <div id="tRight">
-          <div id="joinReplyer"><b>同時REPLY的隊伍</b></div>
+          <div id="joinReplyer" style="font-size:1.2em"><b>同時REPLY的隊伍</b></div>
           <!-- <div>台大國企男籃</div> -->
           <!-- <div>台大會計男籃</div> -->
         </div>
@@ -114,8 +114,12 @@
       <!-- CONFIRM pop-up -->
       <div data-role="popup" id="reply-popup" class="ui-content">
         <div id="reply-title">
-          <div style="font-size:8vw"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="font-size:10vw"></i>確定回覆邀請嗎?</div>
-          請注意! blablablabla的注意事項
+          <div style="font-size:1.5em"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="font-size:10vw;margin-bottom: 1vh"></i>確定回覆邀請嗎?</div>
+          <div style="margin:25px;text-align:left;line-height:1.5em;font-size:1em">
+          請注意!<br>回覆邀請後，約戰方將會取得你的聯絡資料。
+          約戰方有權利決定是否答應這項邀請，
+          如果約戰成功後，出現爽約、運動家精神不佳、不準時...等等狀況，雙方有權利檢舉對方的不當行為，並於賽後回饋中反映此事。請注意賽後回饋將作為公開的參考資料。
+          </div>
         </div>
         <div class="popup-btn" onclick="" style="display:inline-table;width:40%;margin:2vh 3vw;position:absolute;bottom:0px;left:0px"><a href="#" data-rel="back">CANCEL</a></div>
         <div class="popup-btn" id="reply-yes" style="display:inline-table;width:40%;margin:2vh 3vw;position:absolute;bottom:0px;right:0px"><a href="#" data-rel="back">YES</a></div>

@@ -35,26 +35,33 @@ function buildTable(data, id, dataName){
 	for(var i = 0; i < data.length; i++){
 		var listid = allid;
 		var circleStyle = " style='background:";
+        var circlesrc = "./photo/";
+        var photo = "green.png";
 		var status = "JOIN!";
 		var circleColor = "#86C166'"; //未約:綠色
 
         //
-		if(data[i].reply > 0)
+		if(data[i].reply > 0){
 			circleColor = "#FBE251'"; //洽中:黃色
+            photo = "yellow.png";
+        }
 		
 		if(data[i].confirm){
 			status = "END!!";
 			circleColor = "#ED784A'"; //已約:橘色
+            photo = "orange.png";
 		}
 		listid = listid + dataName;
 		circleStyle = circleStyle + circleColor;
+        circlesrc = circlesrc + photo;
 		var content = "<div class='sportLi' id='" + listid + "'><div class='liCircle'"
-		+ circleStyle + "></div><div class='liTeam'>"
+		+ circleStyle + "><img src='" + circlesrc + "' style='width:100%'></div><div class='liTeam'>"
 		+ data[i].team + "<br>"
 		+ data[i].time + "</div><div class='liJoin'>" + status + "</div></div>";
 
 		$(id).append(content);
-		//allid++;
+		allid++;
+        console.log(listid);
 	}
 }
 var presentData;
@@ -76,28 +83,39 @@ $(document).on('click', ".liJoin", function() {
     var index = Math.floor(parseInt(childid) / 10);
     var target = data[index];
     presentData = target;
+    console.log(index);
 
     if(childid)
    		location.href='#joinInfo';
     childid = "#" + childid;
 
     // 如果這個活動邀請已經結束，則隱藏reply的按紐，並設定circle的顏色
+    var circle = $("#joinCircle img"); // 改變左上角的圈圈顏色
     if(target.confirm){
     	$(".joinReply").hide();
-    	$("#joinCircle").css("background","#ED784A"); //已約
+    	// $("#joinCircle").css("background","#ED784A"); //已約
+        circle.attr("src", "./photo/orange.png");
+        console.log("已約");
+        console.log(circle);
     }
     else{
     	$(".joinReply").show();
-    	if(target.reply > 0)
-    		$("#joinCircle").css("background","#FBE251"); //洽中
-    	else
-    		$("#joinCircle").css("background","#86C166"); //未約
+    	if(target.reply > 0){
+    		// $("#joinCircle").css("background","#FBE251"); //洽中
+            circle.attr("src", "./photo/yellow.png");
+            console.log("洽中");
+        }
+    	else{
+    		// $("#joinCircle").css("background","#86C166"); //未約
+            circle.attr("src", "./photo/green.png");
+            console.log("未約");
+        }
     }
 
     $("#joinTeam").html(target.team);
-    $("#joinTime").html("日期/時間:" + target.time);
-    $("#joinPlace").html("地點:" + target.place);
-    $("#joinRemark").html("備註:" + target.remark);
+    $("#joinTime").html("日期/時間:　" + target.time);
+    $("#joinPlace").html("  　　 地點:　" + target.place);
+    $("#joinRemark").html(" 　　 備註:　" + target.remark);
     $("#joinName").html("姓名: " + target.name);
     $("#joinPhone").html("手機: " + target.phone);
     $("#joinEmail").html("EMAIL: " + target.email);
@@ -113,7 +131,7 @@ $(document).on('click', ".liJoin", function() {
     	$("#joinComment").append(content);
     }
     for(var i in target.replyer){
-    	var content = "<div>" + target.replyer[i] + "</div>";
+    	var content = "<div style='margin-top:1.8vh'>" + target.replyer[i] + "</div>";
     	$("#joinReplyer").append(content);
     }
     
@@ -127,18 +145,18 @@ $(document).on('click', '#reply-yes', function(){
 // data
 var data1 = [{
 'team': '台大資管男籃',
-'time': '2017/12/3 12:30',
+'time': '2017/04/20 20:00',
 'reply':1,
-'place':'blablabla',
-'remark':'none',
-'replyer':['師大機電男籃','師大體育男籃'],
-'comment':['測試中測試中測試中測試中測試中測試中','this comment is used to testing that whether it looks ugly','good very good super good 超級棒'],
+'place':'台大中央球場',
+'remark':'需推派裁判',
+'replyer':['師大數學男籃','台大化工男籃','台科大資工男籃'],
+'comment':['GOOD GAME!','球品好','準時!'],
 'confirm':false,
-'name':"呂承維",
-"phone":"0900-000-000",
-"email":"testing@gmail.com",
-"fb":"something like a link or name",
-"line":"yuyuanhey"
+'name':"王小明",
+"phone":"0900-300-050",
+"email":"mingming666@gmail.com",
+"fb":"Ming Wang",
+"line":"mingming666"
 },{
 'team': '台大資管男籃',
 'time': '2017/12/4 12:30',

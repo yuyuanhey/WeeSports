@@ -198,7 +198,7 @@ ul.tab li a {
   padding:0;
   margin:0px 3vw;
   border-radius: 100%;
-  background:#2EA9DF;
+  /*background:#2EA9DF;*/
 }
 #joinTeam{
   width:45%;
@@ -267,7 +267,10 @@ ul.tab li a {
   font-family:Microsoft JhengHei;
   border:2px solid #7DB9DE;
   width:80vw;
-  margin:5vh 10vw;
+  margin:5vh 7.5vw;
+  padding:10px;
+  font-size:1.2em;
+  line-height:1.5em;
 }
 #joinContact div:not(:first-child){
   margin-left:20px;
