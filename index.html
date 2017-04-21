@@ -35,12 +35,13 @@
 </head>
 
 <body style="overflow-y:hidden">
-  <!-- Page: home  -->
+<!-- Each page have tree sections : header, main content, footer -->
+<!-- Page: home  -->
   <div id="home" data-role="page">
     <div data-role="header" data-position="fixed">
       <div class="header-logo">WeeSports</div>
       <div class="header-icon">
-        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
       </div>
     </div>
     <div role="main" class="ui-content" style="padding:0px;height:100%">
@@ -48,7 +49,6 @@
         <div class="ui-block-a sports">
           <img is="image" src="./photo/basketball.png">
         </div>
-        <!--  onclick="javascript:location.href='./sport.html'" -->
         <div class="ui-block-b sports">
           <img is="image" src="./photo/volleyball.png">
         </div>
@@ -73,7 +73,329 @@
     <!-- footer -->
     <div data-position="fixed" data-role="footer">
       <!-- clicking on the footer would go to a new page-->
-      <div class="footer-logo" onclick="javascript:location.href='./newgame.html'">CREATE NEW GAME!</div>
+      <div class="footer-logo" onclick="javascript:location.href='#newgame'">CREATE NEW GAME!</div>
+    </div>
+  </div>
+
+
+
+<!-- Page: home-login -->
+  <div id="home-login" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <div id="home-login-btn">LOGIN</div>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="height:100%">
+      <!-- using img show "WEE SPORTS LOGIN" -->
+      <img src="./photo/login.png" alt="" style="width:100%">
+      
+      <div id="login_input" >
+        <form class="login_form" method="post" action="#">
+          <div style="font-size:2.5em">
+            <label for="account" style="line-height:5em;margin-bottom:50px">ACCOUNT:</label>
+            <input type="text" name="account" id="account" style="border-bottom:0.5px solid black"><br>  
+            <label for="password">PASSWORD:</label>
+            <input type="text" name="password" id="password" style="border-bottom:0.5px solid black">
+          </div>
+          <div>FORGET PASSWORD</div>
+          <div>CREATE ACCOUNT</div>
+          <input id="login_button" type="submit"  value="login">
+        </form>
+  
+      </div>
+    </div>
+
+    <!-- footer -->
+    <!-- <div data-position="fixed" data-role="footer"> -->
+      <!-- clicking on the footer would go to a new page-->
+      <!-- <div class="footer-logo" >WELCOME</div> -->
+    <!-- </div> -->
+  </div>
+
+<!-- Page: Register -->
+  <div id="register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#home-login'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#home'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="padding:0px;height:100%">
+      <form id="register-form">
+        <div id="register-title">REGISTER</div>
+        <!-- 學號 -->
+        <label for="register_id">學號:</label>
+        <input type="text" id="register_id">
+        <!-- 姓名 -->
+        <label for="register_name">姓名:</label>
+        <input type="text"  id="register_name">
+        <label for="register_password">密碼:</label>
+        <input type="text" name="register_password" id="register_password">
+        <label for="register_department">系所:</label>
+        <input type="text" name="register_department" id="register_department">
+      </form>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="register();">JOIN ME</div> <!-- register() not ready -->
+    </div>
+  </div>
+
+<!-- page: myaccount -->
+  <div id="myAccount" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#home-login'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#index.html'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="padding:0px;height:100%">
+      
+        <div id="myAccount-title">myAccount</div>
+        <div class="myAccount" id="myAccount_personalData">個人資料</div>
+        <div class="myAccount" id="myAccount_myBattle">我的約戰</div>
+        <div class="myAccount" id="myAccount_myReply">收到的回覆</div>
+        <div class="myAccount" id="myAccount_myRate">我的評價</div>
+        <div class="myAccount" id="myAccount_Rate">待評評價</div>
+      
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:location.href='#newgame'">CREATE NEW GAME!</div>
+    </div>
+  </div>
+
+
+<!-- Page: CREATE A NEW GAME  -->
+  <div id="newgame" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#sport'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#home'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+
+    <div role="main" class="ui-content">
+      <form id="newgame-form">
+        <!-- <div id="newgame-title">NEW GAME</div> -->
+        <img src="./photo/newgame.png" alt="" style="width:100%">
+        <!-- 運動種類 -->
+        <label for="mySport">SPORT:</label>
+        <input type="text" id="mySport">
+        <!-- 時間 -->
+        <label for="myDate">DATE:</label>
+        <input type="date" name="myDate" id="myDate" data-clear-btn="false">
+        <label for="myTime">TIME:</label>
+        <input type="time" name="myTime" id="myTime" data-clear-btn="false">
+        <!-- 隊伍名稱 -->
+        <label for="myTeam">TEAM:</label>
+        <input type="text" id="myTeam">
+        <!-- 比賽地點與NOTES -->
+        <label for="myLoc">LOCATION:</label>
+        <input type="text" id="myLoc">
+        <label for="myNotes">NOTES:</label>
+        <input type="text" id="myNotes">
+        <!-- 聯絡資料 -->
+        <label for="myInfo" style="display:block;margin-top:3%;">CONTACT INFO</label>
+        <!-- <input type="checkbox" id="myInfo">同會員資料 -->
+        <label for="myName">NAME:</label>
+        <input type="text" id="myName">
+        <label for="myPhone">PHONE:</label>
+        <input type="text" id="myPhone">
+        <label for="myEmail">EMAIL:</label>
+        <input type="text" id="myEmail">
+        <label for="myFB">FB LINK:</label>
+        <input type="text" id="myFB">
+        <label for="myLine">LINE ID:</label>
+        <input type="text" id="myLine">
+      </form>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div data-role="navbar">
+        <ul>
+          <li class="footer-logo-2" onclick="javascript:location.href='#sport'">CANCEL</li>
+          <li class="footer-logo-2" onclick="javascript:location.href='#confirm';myConfirm();">SEND</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- Page: CONFIRM THE SENDING INFO-->
+  <div id="confirm" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#sport'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#home'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+
+    <div role="main" class="ui-content">
+    <!-- <div id="confirm-title">CONFIRM</div> -->
+      <img src="./photo/confirm.png" alt="" style="width:100%">
+      <form id="confirm-form">
+        <!-- 運動種類 -->
+        <label for="mySport">SPORT:</label>
+        <div class="confirm-data" id="confirm-mySport"></div>
+        <!-- 時間 -->
+        <label for="myDate">DATE:</label>
+        <div class="confirm-data" id="confirm-myDate"></div>
+        <label for="myTime">TIME:</label>
+        <div class="confirm-data" id="confirm-myTime"></div>
+        <!-- 隊伍名稱 -->
+        <label for="myTeam">TEAM:</label>
+        <div class="confirm-data" id="confirm-myTeam"></div>
+        <!-- 比賽地點與NOTES -->
+        <label for="myLoc">LOCATION:</label>
+        <div class="confirm-data" id="confirm-myLoc"></div>
+        <label for="myNotes">NOTES:</label>
+        <div class="confirm-data" id="confirm-myNotes"></div>
+        <!-- 聯絡資料 -->
+        <label for="myInfo" style="display:block;margin-top:3vh">CONTACT INFO</label>
+        <!-- <input type="checkbox" id="myInfo">同會員資料 -->
+        <label for="myName">NAME:</label>
+        <div class="confirm-data" id="confirm-myName"></div>
+        <label for="myPhone">PHONE:</label>
+        <div class="confirm-data" id="confirm-myPhone"></div>
+        <label for="myEmail">EMAIL:</label>
+        <div class="confirm-data" id="confirm-myEmail"></div>
+        <label for="myFB">FB LINK:</label>
+        <div class="confirm-data" id="confirm-myFB"></div>
+        <label for="myLine">LINE ID:</label>
+        <div class="confirm-data" id="confirm-myLine"></div>
+      </form>
+      <!-- CONFIRM pop-up -->
+      <div data-role="popup" id="confirm-popup" class="ui-content">
+        <div id="popup-title">
+          YOUR GAME HAS<br>
+          BEEN ADDED<br>
+          SUCCESSFULLY 
+        </div>
+        <div class="popup-btn" onclick="">CHECK MY INVITATION</div>
+        <div class="popup-btn" onclick="javascript:location.href='#sport'">CHECK OTHER INVITATIONS</div>
+        <div class="popup-btn"><a href="#" data-rel="back" class="ui-icon-delete">CLOSE</a></div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div data-role="navbar">
+        <ul>
+          <li class="footer-logo-2" onclick="javascript:location.href='#newgame'">EDIT</li>
+          <li class="footer-logo-2"><a href="#confirm-popup" data-rel="popup" data-transition="pop">CONFIRM</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Page: sport  -->
+  <div id="sport" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#home'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content">
+      <div id="tabpanel">
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="tablinks">籃球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">排球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">棒球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">羽球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">桌球</a></li>
+          <li><a href="javascript:void(0)" class="tablinks">其他</a></li>
+        </ul>
+        <div id="sport1" class="tabcontent"></div>
+        <div id="sport2" class="tabcontent"></div>
+        <div id="sport3" class="tabcontent"></div>
+        <div id="sport4" class="tabcontent"></div>
+        <div id="sport5" class="tabcontent"></div>
+        <div id="sport6" class="tabcontent"></div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:location.href='#newgame'">CREATE NEW GAME!</div>
+    </div>
+  </div>
+
+  <!-- Page: joinInfo -->
+  <div id="joinInfo" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#sport'"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#home'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="font-family:Microsoft JhengHei">
+      <div style="margin:4vh 2vw;height:12vh">
+        <div id="joinCircle"><img src="./photo/yellow.png" style="width:100%"></div>
+        <div id="joinTeam">系隊名</div>
+        <a href="#reply-popup" data-rel="popup" data-transition="pop"><div class="joinReply">REPLY!</div></a>
+      </div>
+      <div style="margin:3vh 0px 3vh 15vw;height:13vh;font-size:1.2em">
+        <div id="joinTime">日期/時間:　</div>
+        <div id="joinPlace">地點:　</div>
+        <div id="joinRemark">備註:　</div>
+      </div>
+      <div id="joinTable">
+        <div id="tLeft">
+          <div id="joinComment" style="font-size:1.2em"><b>歷史評價</b></div>
+          <!-- <div><div style='text-align:left'>Good Game!</div><div style="text-align:right">2016/12/20</div></div> -->
+          <!-- <div><div>球品好</div><div>2016/12/20</div></div> -->
+          <!-- <div><div>準時!</div><div>2016/12/20</div></div> -->
+        </div>
+        <div id="tRight">
+          <div id="joinReplyer" style="font-size:1.2em"><b>同時REPLY的隊伍</b></div>
+          <!-- <div>台大國企男籃</div> -->
+          <!-- <div>台大會計男籃</div> -->
+        </div>
+      </div>
+      <div id="joinContact">
+        <div><b>聯絡資訊</b></div>
+        <div id="joinName">姓名:</div>
+        <div id="joinPhone">手機:</div>
+        <div id="joinEmail">EMAIL:</div>
+        <div id="joinFB">FB:</div>
+        <div id="joinLine">LINE ID:</div>
+      </div> 
+      <!-- CONFIRM pop-up -->
+      <div data-role="popup" id="reply-popup" class="ui-content">
+        <div id="reply-title">
+          <div style="font-size:1.5em"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="font-size:10vw;margin-bottom: 1vh"></i>確定回覆邀請嗎?</div>
+          <div style="margin:25px;text-align:left;line-height:1.5em;font-size:1em">
+          請注意!<br>回覆邀請後，約戰方將會取得你的聯絡資料。
+          約戰方有權利決定是否答應這項邀請，
+          如果約戰成功後，出現爽約、運動家精神不佳、不準時...等等狀況，雙方有權利檢舉對方的不當行為，並於賽後回饋中反映此事。請注意賽後回饋將作為公開的參考資料。
+          </div>
+        </div>
+        <div class="popup-btn" onclick="" style="display:inline-table;width:40%;margin:2vh 3vw;position:absolute;bottom:0px;left:0px"><a href="#" data-rel="back">CANCEL</a></div>
+        <div class="popup-btn" id="reply-yes" style="display:inline-table;width:40%;margin:2vh 3vw;position:absolute;bottom:0px;right:0px"><a href="#" data-rel="back">YES</a></div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:location.href='#newgame'">CREATE NEW GAME!</div>
     </div>
   </div>
 

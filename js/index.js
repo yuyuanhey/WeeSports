@@ -1,5 +1,19 @@
 var current_tab, next_tab, previous_tab;
 
+function myConfirm(){
+    $("#confirm-mySport").html($("#mySport").val());
+    $("#confirm-myDate").html($("#myDate").val());
+    $("#confirm-myTime").html($("#myTime").val());
+    $("#confirm-myTeam").html($("#myTeam").val());
+    $("#confirm-myLoc").html($("#myLoc").val());
+    $("#confirm-myNotes").html($("#myNotes").val());
+    $("#confirm-myName").html($("#myName").val());
+    $("#confirm-myPhone").html($("#myPhone").val());
+    $("#confirm-myEmail").html($("#myEmail").val());
+    $("#confirm-myFB").html($("#myFB").val());
+    $("#confirm-myLine").html($("#myLine").val());
+    // console.log($("#mySport").val());
+}
 
 $(".sports").click(function(){
 	location.replace("./sport.html");
