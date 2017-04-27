@@ -174,9 +174,9 @@
         <div id="myAccount-title" style="margin-top:30px;margin-bottom:15px">MY ACCOUNT</div>
         <div class="myAccount" id="myAccount_personalData" onclick="javascript:location.href='#profile'">個人資料</div>
         <div class="myAccount" id="myAccount_myBattle" onclick="javascript:location.href='#myInvite'">我的約戰</div>
-        <div class="myAccount" id="myAccount_myReply">約戰回覆</div>
+        <div class="myAccount" id="myAccount_myReply" onclick="javascript:location.href='#myReply'">約戰回覆</div>
         <div class="myAccount" id="myAccount_myRate">我的評價</div>
-        <div class="myAccount" id="myAccount_Rate">待評評價</div>
+        <div class="myAccount" id="myAccount_Rate" onclick="javascript:location.href='#home-login'">登出系統</div>
       
     </div>
     <!-- footer -->
@@ -314,6 +314,55 @@
     </div>
   </div>
 
+
+  <!-- my Replies -->
+  <div id="myReply" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <!-- <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#home-login'"></i> -->
+        <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#home'"></i>
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
+      </div>
+    </div>
+    <div role="main" class="ui-content" style="padding:0px;height:100%">
+       <div class="profile-title">MY REPLIES</div>
+       <div style="width:100vw;font-size:3.5vh;text-align:center;margin-top:20px;background:#86C1D4">
+         <div style="width:49%;display:inline-block;background:#86C1D4;padding:10px 0px" id="sendReply" onclick="$('#sendReplyList').fadeIn();$('#recieveReplyList').hide()">我發出的回覆</div>
+         <div style="width:49%;display:inline-block;background:#86C1D4;padding:10px 0px" id="recieveReply" onclick="$('#sendReplyList').hide();$('#recieveReplyList').fadeIn()">接受我的回覆</div>
+       </div>
+       <div id="sendReplyList">
+         <a href="#reply-popup" data-rel="popup" data-transition="pop"><div class="replyLi" style="padding:10px">
+           <img src="./photo/green.png" class="liCircle" style="margin-left:20px"/>
+           <div class="liTeam">師大社會女排<br>2017/3/1 18:00</div>
+           <div class="liJoin">CHECK!</div>
+         </div></a>
+       </div>
+       <div id="recieveReplyList" style="display: none">
+          <a href="#accept-popup" data-rel="popup" data-transition="pop"><div class="replyLi" style="padding:10px">
+          <img src="./photo/orange.png" class="liCircle" style="margin-left:20px"/>
+          <div class="liTeam">台科大資工女排<br>2017/3/1 18:00</div>
+          <div class="liJoin">CHECK!</div>
+         </div></a>
+       </div>
+    </div>
+
+    <!--Replyer pop-up -->
+    <div data-role="popup" id="reply-popup" class="ui-content" style="background:rgb(230,230,230);height:70vh">
+      <img src="./photo/replyer detail.png" alt="" style="width:100%;margin-top:0px;margin-bottom:0px">
+      <div class="popup-btn" style="margin-top:20px"><a href="#" data-rel="back" class="ui-icon-delete">BACK</a></div>
+    </div>
+    <!--Accepter pop-up -->
+    <div data-role="popup" id="accept-popup" class="ui-content" style="background:rgb(230,230,230);height:70vh;width:80vw;margin:auto 5vw">
+      <img src="./photo/accepter detail.png" alt="" style="width:100%;margin:0px auto;">
+      <div class="popup-btn" style="margin-top:20px"><a href="#" data-rel="back" class="ui-icon-delete">BACK</a></div>
+    </div>
+    <!-- footer -->
+    <div data-position="fixed" data-role="footer">
+      <!-- clicking on the footer would go to a new page-->
+      <div class="footer-logo" onclick="javascript:location.href='#newgame';">CREATE NEW GAME!</div>
+    </div>
+  </div>
 
 <!-- Page: CREATE A NEW GAME  -->
   <div id="newgame" data-role="page">

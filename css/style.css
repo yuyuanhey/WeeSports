@@ -161,7 +161,7 @@ ul.tab li a {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-.sportLi, .inviteLi{
+.sportLi, .inviteLi, .replyLi{
   height:9vh;
   padding:1vh;
   margin: 0px;
