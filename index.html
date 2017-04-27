@@ -224,7 +224,7 @@
       </div>
     </div>
     <div role="main" class="ui-content" style="padding:0px;height:100%">
-       <div class="profile-title">個人資料</div>
+       <div class="profile-title">編輯個人資料</div>
        <div class="profile">姓名: 王曉明</div>
        <div class="profile">學校/系級: 台大資管二</div>
        <div class="profile">球隊名稱: 台大資管男籃</div>
@@ -278,13 +278,34 @@
     <div data-role="header" data-position="fixed">
       <div class="header-logo">WeeSports</div>
       <div class="header-icon">
-        <!-- <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#home-login'"></i> -->
+        <i class="fa fa-undo" aria-hidden="true" onclick="javascript:location.href='#myInvite'"></i>
         <i class="fa fa-home" aria-hidden="true" onclick="javascript:location.href='#home'"></i>
         <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#myAccount'"></i>
       </div>
     </div>
     <div role="main" class="ui-content" style="padding:0px;height:100%">
-      <div id="inviterInfo"></div>
+      <div class="profile-title">我的約戰</div>
+      <div id="inviterInfo">
+        <img src="./photo/green.png" style="width:20vw;margin:10px 0px 0px 25px;display:inline-block;">
+        <div style="display:inline-block;width:60vw;padding:5px 0px 0px 25px;font-size:3vh">
+          <div id="checkTeam">男排</div>
+          <div id="checkTime">2017/02/26 17:30</div>
+          <div id="checkPlace">台大戶外排球場場三</div>
+          <div id="checkRemark">備註: 無</div>
+        </div>
+        
+        <div style="font-size:4.5vh;padding:35px 0px 0px 25px;word-spacing:15px">REPLIES RECEIVED</div>
+        <div id="checkReplyer" style="padding:20px 0px 0px 40px;font-size:3vh">
+          <span id="replyer1" class="replyerEX">陳宇源<br><br></span>
+          <span id="replyer2" class="replyerEX">呂程為<br><br></span>
+          <span id="replyer3" class="replyerEX">胡奕帆<br><br></span>
+          <span id="replyer4" class="replyerEX">蕭法軒<br><br></span>
+        </div> 
+      </div>
+    </div>
+    <!-- self-create popup -->
+    <div class="ui-content" id="replyer-popup">
+      
     </div>
     <!-- footer -->
     <div data-position="fixed" data-role="footer">

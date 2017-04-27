@@ -190,21 +190,48 @@ $(document).on('click', '#reply-yes', function(){
 
 $(document).on('click', ".liCheck", function() {
     location.href = "#inviteEvent";
+    // $("#inviteEvent #inviterInfo").empty();
     var index = $(this).closest("div.inviteLi").prop("id");
     var target = userInvitation[index-1];
     var replyerN = target.replyer.length;
 
     var photo = "./photo/green.png";
-    var type  = target.team;
-    var time  = target.time;
-    var place = target.place;
-    var remark= target.remark;
+    
+    $("#checkTeam").html(target.team);
+    $("#checkTime").html(target.time);
+    $("#checkPlace").html(target.place);
+    $("#checkRemark").html(target.remark);
+});
 
-    for(var i = 0; i < replyerN; i++){
-
+$(document).on('click', ".replyerEX", function() {
+    var id = $(this).prop("id");
+    var name = $(this).text();
+    var content = "<div style='font-size:6vw;margin-top:10px'>NAME: " + name + "<br>TEAM: 台大化學" + $("#checkTeam").html() + "<br>PHONE: 0900-000-000<br>Email: b044402003@ntu.edu.tw<br>FB: " + name + "<br>LINE ID: YUYU";
+    var target = $("#replyer-popup");
+    target.html(content+"<br><br><div class='popup-btn' onclick=\"javascript:location.href='#myAccount'\">CANCEL</div>"
+                       +"<div class='popup-btn'>ACCEPT</div></div>");
+    target.fadeIn();
+});
+$(document).on('click', "#replyer-popup .popup-btn", function(){
+    var target = $("#replyer-popup");
+    
+    if($(this).html()=="ACCEPT"){
+        target.html("<span style='font-size:6vh'>ARE YOU SURE?</span><br><br> <span style='font-size:6vw'>確認後，<br>即無法修改或取消</span>"
+                    +"<br><br><div class='popup-btn' onclick=\"javascript:location.href='#myAccount'\">NO</div>"
+                    +"<div class='popup-btn' onclick=\"javascript:location.href='#myAccount'\">YES</div>");
+       $(".popup-btn").click( function(){
+            if($(this).html() == "YES"){
+                target.fadeOut();
+                location.href = "#myAccount";
+            }
+            else{
+                target.fadeOut();
+                location.href = "#myAccount";
+            }
+        });
     }
-    var content = "<p>hello</p>";
-    $("#inviterInfo").append(content);
+    else
+        target.fadeOut();
 });
 
 // data
@@ -248,6 +275,32 @@ var data1 = [{
 "email":"testing@gmail.com",
 "fb":"something like a link or name",
 "line":"yuyuanhey"
+},{
+'team': '台大資管男籃',
+'time': '2017/12/4 12:30',
+'reply':0,
+'place':'blablabla',
+'remark':'none',
+'replyer':{},'comment':{},
+'confirm':false,
+'name':"陳禹媛",
+"phone":"0800-000-000",
+"email":"testing@yahoo.com.tw",
+"fb":"something like a link or name",
+"line":"testing"
+},{
+'team': '台科大化工男籃',
+'time': '2017/12/4 12:30',
+'reply':0,
+'place':'blablabla',
+'remark':'none',
+'replyer':{},'comment':{},
+'confirm':false,
+'name':"陳禹媛",
+"phone":"0800-000-000",
+"email":"testing@yahoo.com.tw",
+"fb":"something like a link or name",
+"line":"testing"
 },{
 'team': '台大化工男籃',
 'time': '2017/12/4 12:30',

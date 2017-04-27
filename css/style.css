@@ -420,6 +420,22 @@ ul.tab li a {
   margin:10vh 5vw 30vh 5vw;
   padding: 0px;
 }
+#replyer-popup{
+  background:#ccc;
+  border:none;
+  height:50vh;
+  width:60vw;
+  margin:25vh 20vw 0vh 20vw;
+  padding:10px;
+  z-index: 1000;
+  display:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  transition:3s fadeEffect;
+  font-size:5vw;
+  text-align:center;
+}
 .login_form{
   width: 100%;
   text-align:center;
