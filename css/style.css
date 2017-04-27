@@ -161,7 +161,7 @@ ul.tab li a {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-.sportLi{
+.sportLi, .inviteLi{
   height:9vh;
   padding:1vh;
   margin: 0px;
@@ -188,7 +188,7 @@ ul.tab li a {
   padding:0px 0px 0px 10px;
   margin: 0;
 }
-.liJoin{
+.liJoin, .liCheck{
   font-family:'Agency FB', Microsoft JhengHei;
   font-size:4vh;
   display:inline-block;
@@ -295,9 +295,33 @@ ul.tab li a {
   padding-right:0px;
   padding-left:0px;
 }
-#newgame-form,#confirm-form,#register-form{
+#myAccount-title{
+  letter-spacing:3vw;
+}
+.profile-title{
+  font-family:'Agency FB',Microsoft JhengHei;
+  font-size:6.5vh;
+  font-weight:normal;
+  letter-spacing:3.9vw;
+  text-align:center;
+  padding-right:0px;
+  padding-left:0px;
+  margin-top:30px;
+  margin-bottom:10px;
+}
+.profile{
+  font-size:3.5vh;
+  line-height:5vh;
+  padding-left:20%;
+  padding-top:7.5%;
+}
+#newgame-form,#confirm-form{
   font-family:'Agency FB',Microsoft JhengHei;
   font-size:3.5vh;
+}
+#register-form{
+  font-family:'Agency FB', Microsoft JhengHei;
+  font-size:3vh;
 }
 #newgame-form label,#register-form label, #confirm label{
   width:30vw;
@@ -388,30 +412,49 @@ ul.tab li a {
   margin:2vh 5vw 2vh 5vw;
   text-align:center;
 }
+#revise-popup{
+  background:#cccccc;
+  border:none;
+  height:30vh;
+  width:80vw;
+  margin:10vh 5vw 30vh 5vw;
+  padding: 0px;
+}
 .login_form{
+  width: 100%;
   text-align:center;
-   font-size:2vw;
 }
 .login_form label{
-  width:30vw;
-  text-align:right;
+  width:30%;
+  /*text-align:right;*/
   font-weight:550;
-  display:inline;
+  display:inline-block;
   padding:0px;
   margin:0px;
+  margin-bottom:10px;
 }
 .login_form input{
-  width:30vw;
+  width:70%;
   padding:0px;
-  padding-left:10px;
+  /*padding-left:10px;*/
   margin:0px;
-  display:inline;
+  display:inline-block;
+  margin-bottom: 10px;
+}
+#login_button{
+  width:40%;
+  font-size:4vh;
+  padding:10px;
+  margin:auto;
+  margin-top:25px;
+  border:1px solid #7DB9DE;
+  font-weight:600;
 }
 .myAccount {
-  position:relative;
+  /*position:relative;*/
   text-align:center;
   font-size: 5vh;
-  padding: 6.5vh 12px 1vh 12px;
+  padding: 5% 12px 5% 12px;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
 }

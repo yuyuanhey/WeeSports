@@ -16,9 +16,10 @@ function myConfirm(){
 }
 
 $(".sports").click(function(){
-	location.replace("./sport.html");
+	// location.replace("./sport.html");
+    location.href = "#sport";
 	var index = $(".sports").index(this);
-	setTab(index);
+	// setTab(index);
 });
 
 // function setTab(index){
@@ -78,6 +79,37 @@ function buildTable(data, id, dataName){
         console.log(listid);
 	}
 }
+function myinvite(userid, inviteData){
+    var allid = 0;
+    for(var i = 0; i < inviteData.length; i++){
+        var circleStyle = " style='background:";
+        var circlesrc = "./photo/";
+        var photo = "green.png";
+        var status = "CHECK!";
+        var circleColor = "#86C166'"; //未約:綠色
+
+        if(inviteData[i].reply > 0){
+            circleColor = "#FBE251'"; //洽中:黃色
+            photo = "yellow.png";
+        }
+        
+        if(inviteData[i].confirm){
+            // status = "END!!";
+            circleColor = "#ED784A'"; //已約:橘色
+            photo = "orange.png";
+        }
+        allid = allid + 1;
+        circleStyle = circleStyle + circleColor;
+        circlesrc = circlesrc + photo;
+        var content = "<div class='inviteLi' id=" + allid + " style='padding:1.5vh 30px;'><div class='liCircle'"
+        + circleStyle + "><img src='" + circlesrc + "' style='width:100%'></div><div class='liTeam'>"
+        + inviteData[i].team + "<br>"
+        + inviteData[i].time + "</div><div class='liCheck'>" + status + "</div></div>";
+
+        $("#invite").append(content);
+    }
+}
+
 var presentData;
 $(document).on('click', ".liJoin", function() {
 	$("#joinContact").hide();
@@ -156,11 +188,30 @@ $(document).on('click', '#reply-yes', function(){
 	// 當#reply-yes送出後，要將此會員的資料送到資料庫
 });
 
+$(document).on('click', ".liCheck", function() {
+    location.href = "#inviteEvent";
+    var index = $(this).closest("div.inviteLi").prop("id");
+    var target = userInvitation[index-1];
+    var replyerN = target.replyer.length;
+
+    var photo = "./photo/green.png";
+    var type  = target.team;
+    var time  = target.time;
+    var place = target.place;
+    var remark= target.remark;
+
+    for(var i = 0; i < replyerN; i++){
+
+    }
+    var content = "<p>hello</p>";
+    $("#inviterInfo").append(content);
+});
+
 // data
 var data1 = [{
 'team': '台大資管男籃',
 'time': '2017/04/20 20:00',
-'reply':1,
+'reply':0,
 'place':'台大中央球場',
 'remark':'需推派裁判',
 'replyer':['師大數學男籃','台大化工男籃','台科大資工男籃'],
@@ -172,7 +223,59 @@ var data1 = [{
 "fb":"Ming Wang",
 "line":"mingming666"
 },{
-'team': '台大資管男籃',
+'team': '台科大化工男籃',
+'time': '2017/12/4 12:30',
+'reply':0,
+'place':'blablabla',
+'remark':'none',
+'replyer':{},'comment':{},
+'confirm':false,
+'name':"陳禹媛",
+"phone":"0800-000-000",
+"email":"testing@yahoo.com.tw",
+"fb":"something like a link or name",
+"line":"testing"
+},{
+'team': '台大資管女籃',
+'time': '2017/12/4 12:30',
+'reply':3,
+'place':'blablabla',
+'remark':'none',
+'replyer':{},'comment':{},
+'confirm':false,
+'name':"呂承維",
+"phone":"0900-000-000",
+"email":"testing@gmail.com",
+"fb":"something like a link or name",
+"line":"yuyuanhey"
+},{
+'team': '台大化工男籃',
+'time': '2017/12/4 12:30',
+'reply':4,
+'place':'blablabla',
+'remark':'none',
+'replyer':['台大法律男籃','台大國企男籃'],'comment':['Nice!'],
+'confirm':false,
+'name':"陳禹媛",
+"phone":"0800-000-000",
+"email":"testing@yahoo.com.tw",
+"fb":"something like a link or name",
+"line":"testing"
+},{
+'team': '師大國文女籃',
+'time': '2017/12/4 12:30',
+'reply':0,
+'place':'blablabla',
+'remark':'none',
+'replyer':{},'comment':{},
+'confirm':true,
+'name':"陳禹媛",
+"phone":"0800-000-000",
+"email":"testing@yahoo.com.tw",
+"fb":"something like a link or name",
+"line":"testing"
+},{
+'team': '台科大數學男籃',
 'time': '2017/12/4 12:30',
 'reply':4,
 'place':'blablabla',
@@ -184,20 +287,7 @@ var data1 = [{
 "email":"testing@yahoo.com.tw",
 "fb":"something like a link or name",
 "line":"testing"
-},{
-'team': '台大資管女籃',
-'time': '2017/12/4 12:30',
-'reply':0,
-'place':'blablabla',
-'remark':'none',
-'replyer':{},'comment':{},
-'confirm':false,
-'name':"呂承維",
-"phone":"0900-000-000",
-"email":"testing@gmail.com",
-"fb":"something like a link or name",
-"line":"yuyuanhey"
-},
+}
 ];
 var data2 = [{
 'team': '台大資管男排',
@@ -346,3 +436,33 @@ buildTable(data4,'#sport4','4');
 buildTable(data5,'#sport5','5');
 buildTable(data6,'#sport6','6');
 
+var userInvitation = [{
+'team': '男籃',
+'time': '2017/12/3 12:30',
+'reply':0,
+'place':'blablabla',
+'remark':'none',
+'replyer':{},'comment':{},
+'confirm':false, 
+'name':"呂承維", 
+"phone":"0900-000-000", 
+"email":"testing@gmail.com",
+"fb":"something like a link or name", 
+"line":"yuyuanhey"
+},{
+'team': '男籃',
+'time': '2017/12/4 12:30',
+'reply':0,
+'place':'blablabla',
+'remark':'none',
+'replyer':{},'comment':{},
+'confirm':false, 
+'name':"呂承維", 
+"phone":"0900-000-000", 
+"email":"testing@gmail.com",
+"fb":"something like a link or name",
+"line":"yuyuanhey"
+},
+];
+
+myinvite(1, userInvitation);
