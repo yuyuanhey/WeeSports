@@ -258,7 +258,7 @@ ul.tab li a {
   height:50vh;
   display:inline-table;
 }
-#reply-popup{
+#reply-popup, #reply-popup1{
   background:#cccccc;
   border:none;
   height:60vh;

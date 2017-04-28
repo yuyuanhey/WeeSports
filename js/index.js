@@ -134,7 +134,7 @@ $(document).on('click', ".liJoin", function() {
     if(childid)
    		location.href='#joinInfo';
     childid = "#" + childid;
-
+    console.log(target);
     // 如果這個活動邀請已經結束，則隱藏reply的按紐，並設定circle的顏色
     var circle = $("#joinCircle img"); // 改變左上角的圈圈顏色
     if(target.confirm){
